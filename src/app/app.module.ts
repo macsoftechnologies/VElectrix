@@ -9,8 +9,8 @@ import { LandingPageComponent } from './landing-page/landing-page.component'
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
+    // HeaderComponent,
+    // FooterComponent,
     LandingPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router'
 import { FooterComponent } from '../shared/footer/footer.component'
 import { HeaderComponent } from '../shared/header/header.component'
 import { HomeComponent } from './home/home.component'
+import { PureVEComponent } from './pure-ve/pure-ve.component'
 import { UserComponent } from './user.component'
 import { VEaseComponent } from './vease/vease.component'
 import { VEnergyComponent } from './venergy/venergy.component'
@@ -47,6 +48,10 @@ const routes: Routes = [
       {
         path: 'Footer',
         component: FooterComponent,
+      },
+      {
+        path: 'PureVE',
+        component: PureVEComponent,
       },
     ],
   },

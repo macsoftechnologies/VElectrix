@@ -1,25 +1,67 @@
 <div class="responsive-menu-header">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="menu-bar">
-          <nav>
-            <input type="checkbox" id="check" />
-            <label for="check" class="checkbtn">
-              <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo">DesignX</label>
-            <ul>
-              <li><a class="active" href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Feedback</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <div class="col-md-6"></div>
+  <div class="menu_section">
+    <div class="menu-icon" onclick="showMenu()">
+      <i class="fa fa-bars open-icon"></i>
     </div>
+    <ul class="menu">
+      <li><img src="assets/images/menulogo.png" /></li>
+      <li class="">
+        <a [routerLink]="['/user/VEnroute']">
+          VENROUTE
+          <i class="fas fa-motorcycle"></i>
+        </a>
+      </li>
+      <li class="">
+        <a href="">
+          VENERGY
+          <i class="fa fa-battery-full" aria-hidden="true"></i>
+        </a>
+      </li>
+      <!-- <li class="sub_drop">
+        <a href="">Seeds-Seedlings</a>
+        <ul class="dropdown-nav">
+          <li>
+            <a href="">Lawn Care</a>
+          </li>
+          <li class="hassub">
+            <a href="">Walling &amp; Fencing</a>
+            <ul class="drop_sub">
+              <li><a href="">Lawn Care</a></li>
+              <li><a href="">Walling &amp; Fencing</a></li>
+              <li><a href="">Landscape design</a></li>
+              <li><a href="">Grounds Maintenance</a></li>
+            </ul>
+          </li>
+          <li><a href="">Landscape design</a></li>
+          <li class="hassub">
+            <a href="">Grounds Maintenance</a>
+            <ul class="drop_sub">
+              <li><a href="">Lawn Care</a></li>
+              <li><a href="">Walling &amp; Fencing</a></li>
+              <li><a href="">Landscape design</a></li>
+              <li><a href="">Grounds Maintenance</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li> -->
+      <li class="">
+        <a href="">
+          VEASE
+          <i class="fas fa-tools"></i>
+        </a>
+      </li>
+      <li class="">
+        <a href="">
+          VEQUIPMENT
+          <i class="fas fa-box"></i>
+        </a>
+      </li>
+      <li class="">
+        <a href="">
+          VESSENTIAL
+          <i class="fas fa-laptop"></i>
+        </a>
+      </li>
+    </ul>
   </div>
 </div>

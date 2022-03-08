@@ -9,7 +9,8 @@ import { VEaseComponent } from './vease/vease.component'
 import { VEquipmentComponent } from './vequipment/vequipment.component'
 import { VEssentialComponent } from './vessential/vessential.component'
 import { HeaderComponent } from '../shared/header/header.component'
-import { FooterComponent } from '../shared/footer/footer.component'
+import { FooterComponent } from '../shared/footer/footer.component';
+import { PureVEComponent } from './pure-ve/pure-ve.component'
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { FooterComponent } from '../shared/footer/footer.component'
     VEssentialComponent,
     HeaderComponent,
     FooterComponent,
+    PureVEComponent,
   ],
   imports: [CommonModule, UserRoutingModule],
 })

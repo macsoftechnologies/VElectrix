@@ -1,0 +1,46 @@
+@media (max-width: 480px) {
+  .Homepage-section {
+    margin-bottom: 60px;
+    .viewpage {
+      text-align: center;
+      //   background: #7c7f8324;
+      border-radius: 30px;
+      width: 350px;
+      margin: auto;
+      margin-bottom: 20px;
+      img {
+        width: auto;
+        height: 260px;
+      }
+      h6 {
+        color: black;
+        font-size: 18px;
+        font-weight: 600;
+        padding: 23px 0 0 0;
+        text-decoration: none;
+      }
+      a {
+        text-decoration: none;
+        i {
+          color: black;
+          font-size: 24px;
+          float: right;
+          margin: 50px 0;
+        }
+      }
+    }
+    .logo {
+      text-align: center;
+      img {
+        margin: auto;
+        display: inline-block;
+        width: 130px;
+        height: 100%;
+      }
+      sup {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+  }
+}

@@ -46,6 +46,7 @@
 @media (max-width: 768px) {
   .menu_section .menu-icon {
     display: block;
+    height: 60px;
   }
 
   .menu ul {
@@ -53,8 +54,8 @@
   }
 
   .menu-icon i {
-    font-size: 20px;
-    margin: 10px 15px;
+    font-size: 23px;
+    margin: 20px 25px;
   }
 
   .logo img {
@@ -67,7 +68,7 @@
     height: 375px;
     position: fixed !important;
     z-index: 1;
-    top: 37px;
+    top: 65px;
     display: flex;
     flex-direction: column;
     left: 0px;
@@ -110,6 +111,6 @@
   .close-icon::before {
     content: '\f00d';
     font-family: FontAwesome;
-    font-size: 20px;
+    font-size: 23px;
   }
 }

@@ -4,7 +4,11 @@
       <i class="fa fa-bars open-icon"></i>
     </div>
     <ul class="menu">
-      <li><img src="assets/images/menulogo.png" /></li>
+      <li>
+        <a [routerLink]="['/user/Home']">
+          <img src="assets/images/menulogo.png" />
+        </a>
+      </li>
       <li class="">
         <a [routerLink]="['/user/VEnroute']">
           VENROUTE
@@ -14,7 +18,7 @@
       <li class="">
         <a href="">
           VENERGY
-          <i class="far fa-arrow-alt-circle-right"></i>
+          <i class="fa fa-battery-full" aria-hidden="true"></i>
         </a>
       </li>
       <!-- <li class="sub_drop">

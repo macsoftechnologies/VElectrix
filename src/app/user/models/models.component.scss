@@ -28,6 +28,42 @@
           margin: 50px 0;
         }
       }
+      ul.colorcode li {
+        float: left;
+        margin-right: 10px;
+      }
+      ul.colorcode li input {
+        width: 20px;
+        height: 20px;
+        border: none;
+        outline: none;
+        box-shadow: none;
+      }
+    }
+    .locatebtn {
+      button.btn.btn-dark {
+        font-size: 11px;
+        width: 50%;
+        height: 38px;
+        border-radius: 0px;
+        box-shadow: none;
+        outline: none;
+        color: white;
+        background: black;
+        border: none;
+      }
+      button.btn.btn-link {
+        font-size: 11px;
+        width: 50%;
+        height: 38px;
+        border-radius: 0px;
+        box-shadow: none;
+        outline: none;
+        border: 1px solid black;
+        color: black;
+        text-decoration: none;
+        background: white;
+      }
     }
     .logo {
       text-align: center;

@@ -11,7 +11,10 @@ import { VEssentialComponent } from './vessential/vessential.component'
 import { HeaderComponent } from '../shared/header/header.component'
 import { FooterComponent } from '../shared/footer/footer.component';
 import { PureVEComponent } from './pure-ve/pure-ve.component';
-import { ModelsComponent } from './models/models.component'
+import { ModelsComponent } from './models/models.component';
+import { BoomComponent } from './boom/boom.component';
+import { TestrideComponent } from './testride/testride.component';
+import { LocationComponent } from './location/location.component'
 
 @NgModule({
   declarations: [
@@ -26,6 +29,9 @@ import { ModelsComponent } from './models/models.component'
     FooterComponent,
     PureVEComponent,
     ModelsComponent,
+    BoomComponent,
+    TestrideComponent,
+    LocationComponent,
   ],
   imports: [CommonModule, UserRoutingModule],
 })

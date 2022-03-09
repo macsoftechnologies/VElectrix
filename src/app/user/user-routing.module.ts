@@ -2,9 +2,12 @@ import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
 import { FooterComponent } from '../shared/footer/footer.component'
 import { HeaderComponent } from '../shared/header/header.component'
+import { BoomComponent } from './boom/boom.component'
 import { HomeComponent } from './home/home.component'
+import { LocationComponent } from './location/location.component'
 import { ModelsComponent } from './models/models.component'
 import { PureVEComponent } from './pure-ve/pure-ve.component'
+import { TestrideComponent } from './testride/testride.component'
 import { UserComponent } from './user.component'
 import { VEaseComponent } from './vease/vease.component'
 import { VEnergyComponent } from './venergy/venergy.component'
@@ -57,6 +60,18 @@ const routes: Routes = [
       {
         path: 'Models',
         component: ModelsComponent,
+      },
+      {
+        path: 'Boom',
+        component: BoomComponent,
+      },
+      {
+        path: 'Testride',
+        component: TestrideComponent,
+      },
+      {
+        path: 'Location',
+        component: LocationComponent,
       },
     ],
   },

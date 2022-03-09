@@ -5,41 +5,61 @@
         <img src="assets/images/PureVE/models.png" />
         <sup>7G</sup>
       </div>
+    </div>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-7">
+        <div class="viewpage">
+          <a>
+            <img
+              src="assets/images/1 - VENROUTE/1 -  PURE EV/EPLUTO 7G _ EPLUTO/Red Epluto.png"
+            />
 
-      <div class="viewpage">
-        <a [routerLink]="['/user/']">
-          <img
-            src="assets/images/1 - VENROUTE/1 -  PURE EV/EPLUTO 7G _ EPLUTO/Red Epluto.png"
-          />
-
-          <!-- <i class="far fa-arrow-alt-circle-right"></i> -->
-        </a>
-        <ul class="colorcode">
-          <li><input type="color" value="#ff0000" /></li>
-          <li><input type="color" value="#ffa500" /></li>
-          <li><input type="color" value="#ffff00" /></li>
-          <li><input type="color" value="#001fff" /></li>
-          <li><input type="color" value="#ffffff" /></li>
-          <li><input type="color" value="#808080" /></li>
-          <li><input type="color" value="#000000" /></li>
-        </ul>
+            <!-- <i class="far fa-arrow-alt-circle-right"></i> -->
+          </a>
+          <ul class="colorcode">
+            <li><input type="color" value="#ff0000" /></li>
+            <li><input type="color" value="#ffa500" /></li>
+            <li><input type="color" value="#ffff00" /></li>
+            <li><input type="color" value="#001fff" /></li>
+            <li><input type="color" value="#ffffff" /></li>
+            <li><input type="color" value="#808080" /></li>
+            <li><input type="color" value="#000000" /></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="icons">
+          <i class="fa fa-heart-o" aria-hidden="true"></i>
+          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-md-6">
-        <div class="rating">4.1</div>
+      <div class="col-6">
+        <div class="ratetag">
+          <div class="rating">
+            <i class="fa fa-star" aria-hidden="true"></i>
+            4.1
+          </div>
+        </div>
       </div>
-      <div class="col-md-6">
-        <div class="amount">97,000</div>
+      <div class="col-6">
+        <div class="ratetag">
+          <div class="amount"><strong>₹ 97,000</strong></div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="locatebtn">
+
+    <div class="locatebtn">
+      <a [routerLink]="['/user/Location']">
         <button type="button" class="btn btn-dark">LOCATE STORE</button>
+      </a>
+      <a [routerLink]="['/user/Testride']">
         <button type="button" class="btn btn-link">
           BOOK A TEST RIDE
         </button>
-      </div>
+      </a>
     </div>
   </div>
 </div>

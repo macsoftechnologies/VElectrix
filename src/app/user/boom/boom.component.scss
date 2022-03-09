@@ -4,13 +4,14 @@
     .viewpage {
       text-align: center;
       background: #7c7f8324;
-      border-radius: 30px;
-      width: 350px;
+      //   border-radius: 30px;
+      width: 100%;
       margin: auto;
       margin-bottom: 20px;
+      height: 200px;
       img {
-        width: 180px;
-        height: 150px;
+        width: 300px;
+        height: 160px;
       }
       h6 {
         color: black;

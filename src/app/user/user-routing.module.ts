@@ -1,7 +1,12 @@
 import { NgModule } from '@angular/core'
 import { RouterModule, Routes } from '@angular/router'
+import { ChargingstationComponent } from '../chargingstation/chargingstation.component'
+import { CharzerComponent } from '../charzer/charzer.component'
+import { RequestasstComponent } from '../requestasst/requestasst.component'
+import { ServicestationComponent } from '../servicestation/servicestation.component'
 import { FooterComponent } from '../shared/footer/footer.component'
 import { HeaderComponent } from '../shared/header/header.component'
+import { SocketComponent } from '../socket/socket.component'
 import { BoomComponent } from './boom/boom.component'
 import { HomeComponent } from './home/home.component'
 import { LocationComponent } from './location/location.component'
@@ -72,6 +77,26 @@ const routes: Routes = [
       {
         path: 'Location',
         component: LocationComponent,
+      },
+      {
+        path: 'Charzer',
+        component: CharzerComponent,
+      },
+      {
+        path: 'Socket',
+        component: SocketComponent,
+      },
+      {
+        path: 'Chargingstation',
+        component: ChargingstationComponent,
+      },
+      {
+        path: 'Servicestation',
+        component: ServicestationComponent,
+      },
+      {
+        path: 'Requestasst',
+        component: RequestasstComponent,
       },
     ],
   },

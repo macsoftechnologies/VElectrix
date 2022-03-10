@@ -1,0 +1,28 @@
+.venergysection {
+  margin-bottom: 30px;
+  text-align: center;
+  button.btn.btn-danger {
+    text-align: center;
+    background: red;
+    width: 200px;
+    height: 60px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  button.btn.btn-success {
+    text-align: center;
+    background: #44992fd1;
+    width: 200px;
+    height: 60px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

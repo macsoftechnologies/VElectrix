@@ -1,0 +1,53 @@
+.charzersection {
+  margin-bottom: 60px;
+  .socketfield {
+    height: 35px;
+    background-image: linear-gradient(to top, #a7d5aacf, #bcefbc61);
+    color: black;
+    text-align: center;
+    padding: 7px 0;
+    font-weight: 600;
+    font-size: 17px;
+    p {
+      margin-bottom: 0px;
+    }
+  }
+  .charzer {
+    text-align: center;
+    img {
+      width: 60px;
+      height: 240px;
+      padding: 20px 0;
+    }
+  }
+  .Locatefield {
+    height: 50px;
+    background: #44992fd1;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 600;
+    font-size: 14px;
+    p {
+      margin-bottom: 0px;
+    }
+    a {
+      color: white;
+    }
+  }
+  .specs {
+    border-bottom: 1px solid #80808014;
+    h6 {
+      margin-top: 18px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    ul {
+      li {
+        font-size: 13px;
+        margin-bottom: 10px;
+        line-height: 25px;
+      }
+    }
+  }
+}

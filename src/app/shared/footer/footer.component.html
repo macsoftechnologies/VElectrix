@@ -1,15 +1,17 @@
 <div class="responsive-filters d-block d-md-none">
   <div class="filter-btn">
-    <button [routerLink]="['/cart']">
-      <i class="fa fa-search" aria-hidden="true"></i>
+    <button [routerLink]="['/']">
+      <mat-icon>search</mat-icon>
       <!-- <p>Cart</p> -->
     </button>
     <button [routerLink]="['']">
-      <i class="fa fa-home" aria-hidden="true"></i>
+      <mat-icon aria-hidden="true" aria-label="Example home icon">
+        home
+      </mat-icon>
       <!-- <p>Home</p> -->
     </button>
-    <button [routerLink]="['/myaccount']">
-      <i class="fa fa-user" aria-hidden="true"></i>
+    <button [routerLink]="['']">
+      <mat-icon>person</mat-icon>
       <!-- <p>My Account</p> -->
     </button>
   </div>

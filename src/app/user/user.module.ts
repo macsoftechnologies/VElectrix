@@ -9,12 +9,13 @@ import { VEaseComponent } from './vease/vease.component'
 import { VEquipmentComponent } from './vequipment/vequipment.component'
 import { VEssentialComponent } from './vessential/vessential.component'
 import { HeaderComponent } from '../shared/header/header.component'
-import { FooterComponent } from '../shared/footer/footer.component';
-import { PureVEComponent } from './pure-ve/pure-ve.component';
-import { ModelsComponent } from './models/models.component';
-import { BoomComponent } from './boom/boom.component';
-import { TestrideComponent } from './testride/testride.component';
+import { FooterComponent } from '../shared/footer/footer.component'
+import { PureVEComponent } from './pure-ve/pure-ve.component'
+import { ModelsComponent } from './models/models.component'
+import { BoomComponent } from './boom/boom.component'
+import { TestrideComponent } from './testride/testride.component'
 import { LocationComponent } from './location/location.component'
+import { MatIconModule } from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -33,6 +34,6 @@ import { LocationComponent } from './location/location.component'
     TestrideComponent,
     LocationComponent,
   ],
-  imports: [CommonModule, UserRoutingModule],
+  imports: [CommonModule, UserRoutingModule, MatIconModule],
 })
 export class UserModule {}

@@ -56,11 +56,11 @@
       font-size: 18px;
       margin: 160px 0 0px 0;
     }
-    .icons i {
+    .icons .mat-icon {
       margin-bottom: 5px;
     }
-    i.fa.fa-shopping-cart {
-      font-size: 20px;
+    .mat-icon {
+      font-size: 24px;
     }
     .locatebtn {
       button.btn.btn-dark {
@@ -114,9 +114,9 @@
       border-radius: 6px;
       margin: auto;
       font-weight: 700;
-      i {
-        font-size: 12px;
-        margin-top: 8px;
+      .mat-icon {
+        font-size: 14px;
+        margin-top: 6px;
       }
     }
     .amount {

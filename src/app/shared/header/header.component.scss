@@ -53,9 +53,13 @@
     display: none;
   }
 
-  .menu-icon i {
-    font-size: 20px;
-    margin: 20px 25px;
+  .menu-icon .mat-icon {
+    // font-size: 20px;
+    // margin: 20px 25px;
+    line-height: 46px;
+    padding: 13px;
+    font-size: 29px;
+    font-weight: 600;
   }
 
   .logo img {

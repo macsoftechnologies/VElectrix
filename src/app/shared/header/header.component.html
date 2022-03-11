@@ -1,7 +1,8 @@
 <div class="responsive-menu-header">
   <div class="menu_section">
     <div class="menu-icon" (click)="showMenu()">
-      <i class="fa fa-bars open-icon"></i>
+      <!-- <i class="fa fa-bars open-icon"></i> -->
+      <mat-icon class="open-icon">notes</mat-icon>
     </div>
     <ul class="menu">
       <li>
@@ -9,16 +10,17 @@
           <img src="assets/images/menulogo.png" />
         </a>
       </li>
+
       <li class="">
         <a [routerLink]="['/user/VEnroute']">
           VENROUTE
-          <i class="fa fa-motorcycle"></i>
+          <mat-icon>motorcycle</mat-icon>
         </a>
       </li>
       <li class="">
         <a [routerLink]="['/user/VEnergy']">
           VENERGY
-          <i class="fa fa-battery-full" aria-hidden="true"></i>
+          <mat-icon>battery_charging_full</mat-icon>
         </a>
       </li>
       <!-- <li class="sub_drop">
@@ -63,7 +65,7 @@
       <li class="">
         <a href="">
           VESSENTIAL
-          <i class="fa fa-laptop"></i>
+          <mat-icon>laptop_chromebook</mat-icon>
         </a>
       </li>
     </ul>

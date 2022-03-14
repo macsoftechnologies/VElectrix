@@ -1,28 +1,37 @@
-.testridesection {
-  .card {
-    margin-bottom: 60px;
-    .card-body {
-      .testreq {
-        h6 {
-          text-align: center;
-          font-weight: 600;
-          font-size: 16px;
-          margin-bottom: 20px;
-        }
-        .table td,
-        .table th {
-          border: 0px;
-          padding: 0px !important;
-          line-height: 28px;
-          font-size: 12px;
-          font-weight: 600;
-          text-transform: uppercase;
-        }
-        .table th {
-          width: 40%;
-        }
-        .table td {
-          width: 60%;
+@media only screen and (max-width: 480px) {
+  .testridesection {
+    .card {
+      margin-bottom: 60px;
+      .card-body {
+        .testreq {
+          h6 {
+            text-align: center;
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 20px;
+          }
+          .table td,
+          .table th {
+            border: 0px;
+            padding: 0px !important;
+            line-height: 28px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+          }
+          .table th {
+            width: 40%;
+            line-height: 40px;
+          }
+          .table td {
+            width: 60%;
+          }
+          .table tr td input {
+            height: 30px;
+            box-shadow: none;
+            width: 100%;
+            border-radius: 0px;
+          }
         }
       }
     }

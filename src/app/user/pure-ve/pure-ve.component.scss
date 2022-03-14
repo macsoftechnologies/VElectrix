@@ -8,8 +8,9 @@
       width: 350px;
       margin: auto;
       margin-bottom: 20px;
+      margin-right: 10px;
       img {
-        width: 180px;
+        width: auto;
         height: 150px;
       }
       h6 {
@@ -40,4 +41,27 @@
       }
     }
   }
+}
+.carousel-control.left,
+.carousel-control.right {
+  background-image: none !important;
+}
+.mat-icon {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  color: black;
+  font-size: 30px;
+}
+.carousel-control {
+  background-color: transparent;
+  opacity: 1;
+  // left: 25px;
+}
+#myCarousel,
+#myCarousel1 {
+  margin: auto;
+}
+.carousel-control.left {
+  left: 20px;
 }

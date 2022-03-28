@@ -16,6 +16,7 @@ import { BoomComponent } from './boom/boom.component'
 import { TestrideComponent } from './testride/testride.component'
 import { LocationComponent } from './location/location.component'
 import { MatIconModule } from '@angular/material/icon'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -34,6 +35,12 @@ import { MatIconModule } from '@angular/material/icon'
     TestrideComponent,
     LocationComponent,
   ],
-  imports: [CommonModule, UserRoutingModule, MatIconModule],
+  imports: [
+    CommonModule,
+    UserRoutingModule,
+    MatIconModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
 })
 export class UserModule {}

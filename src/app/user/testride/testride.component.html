@@ -2,42 +2,247 @@
   <div class="container">
     <div class="card">
       <div class="card-body">
-        <div class="testreq">
-          <h6>Requirements for Test Ride</h6>
-          <table class="table">
-            <thead></thead>
-            <tbody>
-              <tr>
-                <th scope="row">NAME</th>
-                <td><input type="text" class="form-control" /></td>
-              </tr>
-              <tr>
-                <th scope="row">AADHAR NO.</th>
-                <td><input type="number" class="form-control" /></td>
-              </tr>
-              <tr>
-                <th scope="row">CONTACT NO.</th>
-                <td><input type="number" class="form-control" /></td>
-              </tr>
-              <tr>
-                <th scope="row">ADDRESS</th>
-                <td><input type="text" class="form-control" /></td>
-              </tr>
-              <tr>
-                <th scope="row">AREA</th>
-                <td><input type="text" class="form-control" /></td>
-              </tr>
-              <tr>
-                <th scope="row">LANDMARK</th>
-                <td><input type="text" class="form-control" /></td>
-              </tr>
-              <tr>
-                <th scope="row">CITY</th>
-                <td><input type="text" class="form-control" /></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <form>
+          <div class="testreq" [formGroup]="BookrideForm">
+            <h6>Requirements for Test Ride</h6>
+            <table class="table">
+              <thead></thead>
+              <tbody>
+                <tr>
+                  <th scope="row">
+                    NAME
+                    <sup>
+                      <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    </sup>
+                  </th>
+                  <td>
+                    <input
+                      [class.is-invalid]="
+                        (BookrideForm.get('name')?.invalid &&
+                          BookrideForm.get('name')?.touched) ||
+                        (BookrideForm.get('name')?.pristine && hasError)
+                      "
+                      type="text"
+                      class="form-control"
+                      id="name"
+                      formControlName="name"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (BookrideForm.get('name')?.invalid &&
+                          BookrideForm.get('name')?.touched) ||
+                        (BookrideForm.get('name')?.pristine && hasError)
+                      "
+                    >
+                      Please enter your Name
+                    </span>
+                  </td>
+                </tr>
+                <!-- <tr>
+                  <th scope="row">
+                    AADHAR NO.
+                    <sup>
+                      <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    </sup>
+                  </th>
+                  <td>
+                    <input
+                      [class.is-invalid]="
+                        (BookrideForm.get('aadharNo')?.invalid &&
+                          BookrideForm.get('aadharNo')?.touched) ||
+                        (BookrideForm.get('aadharNo')?.pristine && hasError)
+                      "
+                      type="number"
+                      class="form-control"
+                      id="aadharNo"
+                      formControlName="aadharNo"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (BookrideForm.get('aadharNo')?.invalid &&
+                          BookrideForm.get('aadharNo')?.touched) ||
+                        (BookrideForm.get('aadharNo')?.pristine && hasError)
+                      "
+                    >
+                      Please enter your Aadhar No.
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    CONTACT NO.
+
+                    <sup>
+                      <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    </sup>
+                  </th>
+                  <td>
+                    <input
+                      [class.is-invalid]="
+                        (BookrideForm.get('contactNo')?.invalid &&
+                          BookrideForm.get('contactNo')?.touched) ||
+                        (BookrideForm.get('contactNo')?.pristine && hasError)
+                      "
+                      type="number"
+                      class="form-control"
+                      id="contactNo"
+                      formControlName="contactNo"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (BookrideForm.get('contactNo')?.invalid &&
+                          BookrideForm.get('contactNo')?.touched) ||
+                        (BookrideForm.get('contactNo')?.pristine && hasError)
+                      "
+                    >
+                      Please enter your Contact No.
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    ADDRESS1
+                    <sup>
+                      <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    </sup>
+                  </th>
+                  <td>
+                    <input
+                      [class.is-invalid]="
+                        (BookrideForm.get('address')?.invalid &&
+                          BookrideForm.get('address')?.touched) ||
+                        (BookrideForm.get('address')?.pristine && hasError)
+                      "
+                      type="text"
+                      class="form-control"
+                      id="address"
+                      formControlName="address"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (BookrideForm.get('address')?.invalid &&
+                          BookrideForm.get('address')?.touched) ||
+                        (BookrideForm.get('address')?.pristine && hasError)
+                      "
+                    >
+                      Please enter your Address1
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    ADDRESS2
+                    <sup>
+                      <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    </sup>
+                  </th>
+                  <td>
+                    <input
+                      [class.is-invalid]="
+                        (BookrideForm.get('area')?.invalid &&
+                          BookrideForm.get('area')?.touched) ||
+                        (BookrideForm.get('area')?.pristine && hasError)
+                      "
+                      type="text"
+                      class="form-control"
+                      id="area"
+                      formControlName="area"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (BookrideForm.get('area')?.invalid &&
+                          BookrideForm.get('area')?.touched) ||
+                        (BookrideForm.get('area')?.pristine && hasError)
+                      "
+                    >
+                      Please enter your Address2
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    LANDMARK
+                    <sup>
+                      <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    </sup>
+                  </th>
+                  <td>
+                    <input
+                      [class.is-invalid]="
+                        (BookrideForm.get('landMark')?.invalid &&
+                          BookrideForm.get('landMark')?.touched) ||
+                        (BookrideForm.get('landMark')?.pristine && hasError)
+                      "
+                      type="text"
+                      class="form-control"
+                      id="landMark"
+                      formControlName="landMark"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (BookrideForm.get('landMark')?.invalid &&
+                          BookrideForm.get('landMark')?.touched) ||
+                        (BookrideForm.get('landMark')?.pristine && hasError)
+                      "
+                    >
+                      Please enter your LandMark
+                    </span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">
+                    CITY
+                    <sup>
+                      <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    </sup>
+                  </th>
+                  <td>
+                    <input
+                      [class.is-invalid]="
+                        (BookrideForm.get('city')?.invalid &&
+                          BookrideForm.get('city')?.touched) ||
+                        (BookrideForm.get('city')?.pristine && hasError)
+                      "
+                      type="text"
+                      class="form-control"
+                      id="city"
+                      formControlName="city"
+                    />
+                    <span
+                      class="error"
+                      *ngIf="
+                        (BookrideForm.get('city')?.invalid &&
+                          BookrideForm.get('city')?.touched) ||
+                        (BookrideForm.get('city')?.pristine && hasError)
+                      "
+                    >
+                      Please enter your City
+                    </span>
+                  </td>
+                </tr>
+                 -->
+                <tr>
+                  <th></th>
+                  <td>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      (click)="bookride()"
+                    >
+                      Submit
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </form>
       </div>
     </div>
   </div>

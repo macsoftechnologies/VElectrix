@@ -32,6 +32,33 @@
             width: 100%;
             border-radius: 0px;
           }
+          .table {
+            tbody {
+              tr {
+                th {
+                  sup {
+                    i {
+                      color: #eb0909;
+                      font-size: 7px;
+                    }
+                  }
+                }
+                td {
+                  span {
+                    font-size: 10px;
+                    text-transform: none;
+                    color: #df4957;
+                  }
+                  button.btn {
+                    text-align: center;
+                    margin: auto;
+                    display: block;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

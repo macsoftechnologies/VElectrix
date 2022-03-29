@@ -7,56 +7,34 @@
           h6 {
             text-align: center;
             font-weight: 600;
-            font-size: 16px;
+            font-size: 18px;
             margin-bottom: 20px;
           }
-          .table td,
-          .table th {
-            border: 0px;
-            padding: 0px !important;
-            line-height: 28px;
-            font-size: 12px;
-            font-weight: 600;
-            text-transform: uppercase;
-          }
-          .table th {
-            width: 40%;
-            line-height: 40px;
-          }
-          .table td {
-            width: 60%;
-          }
-          .table tr td input {
-            height: 30px;
-            box-shadow: none;
-            width: 100%;
-            border-radius: 0px;
-          }
-          .table {
-            tbody {
-              tr {
-                th {
-                  sup {
-                    i {
-                      color: #eb0909;
-                      font-size: 7px;
-                    }
-                  }
-                }
-                td {
-                  span {
-                    font-size: 10px;
-                    text-transform: none;
-                    color: #df4957;
-                  }
-                  button.btn {
-                    text-align: center;
-                    margin: auto;
-                    display: block;
-                    width: 100%;
-                  }
-                }
+
+          .form-group {
+            label {
+              font-size: 12px;
+            }
+            sup {
+              i {
+                color: #eb0909;
+                font-size: 8px;
               }
+            }
+            span {
+              font-size: 12px;
+              text-transform: none;
+              color: #df4957;
+            }
+            .form-control {
+              background-image: none;
+            }
+            button.btn {
+              text-align: center;
+              margin: auto;
+              display: block;
+
+              padding: 10px 30px;
             }
           }
         }

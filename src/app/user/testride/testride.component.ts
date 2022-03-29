@@ -19,10 +19,6 @@ export class TestrideComponent implements OnInit {
   ) {
     let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
     this.BookrideForm = new FormGroup({
-      Email: new FormControl('', [
-        Validators.required,
-        Validators.pattern(emailRegex),
-      ]),
       name: new FormControl('', [Validators.required]),
       aadharNo: new FormControl('', [Validators.required]),
       contactNo: new FormControl('', [Validators.required]),
@@ -55,7 +51,8 @@ export class TestrideComponent implements OnInit {
             showConfirmButton: false,
             timer: 3000,
           })
-          this.router.navigateByUrl('admin/Dashboard')
+          console.log('data sent')
+          // this.router.navigateByUrl('admin/Dashboard')
         } else {
           Swal.fire({
             icon: 'error',

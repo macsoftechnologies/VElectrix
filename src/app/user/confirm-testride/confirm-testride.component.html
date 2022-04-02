@@ -1,7 +1,15 @@
 <section class="confirmTestride_section">
     <div class="success_message">
         <img src="./assets/images/success.gif">
-        <p>Your Test ride is successfully initiated</p>
-        <p>Concern Team will get back to you.</p>
+        <div class="success_text">
+            <p>Your Test ride is successfully initiated</p>
+            <p>Concern Team will get back to you.</p>
+        </div>
+
+        <div class="backto">
+            <button type="submit" class="btn backto" (click)="backtohome()">
+                <mat-icon>arrow_left_alt</mat-icon>Back To Home
+            </button>
+        </div>
     </div>
 </section>

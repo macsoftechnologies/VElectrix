@@ -6,10 +6,34 @@
     height: 100%; 
     .success_message {
         text-align: center;
-        p {
-            font-size: 14px;
-            font-weight: bold;
+        padding-top: 70px;
+        .success_text {
             margin: 15px 0px;
+            p {
+                font-size: 14px;
+                font-weight: bold;
+                margin: 15px 0px;
+            }
+        }        
+    }  
+    
+    .backto {
+        button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            font-size: 13px;
+            box-shadow: none;
+            border: none;
+            background-color: #28b8e8;
+            background-image: linear-gradient(to right, #2cbae7, #0f347d);
+            padding: 10px 20px;
+            width: 173px;
+            color: #fff;
+            transition: 0.8s ease-in-out;
+            border-radius: 30px;
+            height: 45px;
         }
-    }    
+    }
 } 

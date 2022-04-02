@@ -1,0 +1,15 @@
+.confirmTestride_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto; */
+    height: 100%; 
+    .success_message {
+        text-align: center;
+        p {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 15px 0px;
+        }
+    }    
+} 

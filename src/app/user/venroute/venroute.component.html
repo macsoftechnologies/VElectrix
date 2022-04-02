@@ -1,21 +1,14 @@
 <div class="Homepage-section">
   <div class="container">
     <div class="row">
-      <div class="viewpage">
-        <a [routerLink]="['/user/PureVE']">
-          <img src="assets/images/VEnroute/EVBrands1.jpg" />
-        </a>
-      </div>
-      <div class="viewpage">
-        <a [routerLink]="['/user/Boom']">
-          <img src="assets/images/VEnroute/EVBrands2.jpg" />
-        </a>
-      </div>
-      <div class="viewpage">
-        <a [routerLink]="['/user/PureVE']">
-          <img src="assets/images/VEnroute/EVBrands3.jpg" />
+      <div class="viewpage" *ngFor="let item of getBrandList">
+        <a>
+          <img src="{{baseUrl}}{{item?.brandImage}}" (click)="GoToProducts(item)" />
         </a>
       </div>
     </div>
   </div>
 </div>
+
+
+<!-- [routerLink]="['/user/PureVE']" -->

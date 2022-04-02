@@ -294,8 +294,9 @@
                   type="number"
                   class="form-control"
                   id="aadharNo"
+                  pattern="\d*"
                   formControlName="aadharNo"
-                  maxlength="16"
+                  maxlength="12"
                 />
                 <span
                   class="error"
@@ -305,7 +306,7 @@
                     (BookrideForm.get('aadharNo')?.pristine && hasError)
                   "
                 >
-                  Please enter your Aadhar No
+                  Please enter your valid Aadhar No
                 </span>
               </div>
             </div>
@@ -326,6 +327,7 @@
                   type="number"
                   class="form-control"
                   id="contactNo"
+                  pattern="\d*"
                   formControlName="contactNo"
                   maxlength="10"
                 />

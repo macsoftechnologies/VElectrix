@@ -3,9 +3,13 @@
     margin-bottom: 60px;
     .viewpage {
       text-align: center;
-      margin: auto;
+      margin: 10px 15px;
       img {
         margin-bottom: 0px;
+        width: 100%;
+        height: 300px;
+        box-shadow: 0 2px 8px 1px rgb(64 60 67 / 24%);
+        border-color: rgba(223,225,229,0);
       }
     }
   }

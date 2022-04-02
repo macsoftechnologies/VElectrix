@@ -8,6 +8,7 @@ import { FooterComponent } from '../shared/footer/footer.component'
 import { HeaderComponent } from '../shared/header/header.component'
 import { SocketComponent } from '../socket/socket.component'
 import { BoomComponent } from './boom/boom.component'
+import { ConfirmTestrideComponent } from './confirm-testride/confirm-testride.component'
 import { HomeComponent } from './home/home.component'
 import { LocationComponent } from './location/location.component'
 import { ModelsComponent } from './models/models.component'
@@ -98,6 +99,10 @@ const routes: Routes = [
         path: 'Requestasst',
         component: RequestasstComponent,
       },
+      {
+        path: 'confirm Testride',
+        component: ConfirmTestrideComponent
+      }
     ],
   },
 ]

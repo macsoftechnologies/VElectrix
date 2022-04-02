@@ -16,7 +16,8 @@ import { BoomComponent } from './boom/boom.component'
 import { TestrideComponent } from './testride/testride.component'
 import { LocationComponent } from './location/location.component'
 import { MatIconModule } from '@angular/material/icon'
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ConfirmTestrideComponent } from './confirm-testride/confirm-testride.component'
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
     BoomComponent,
     TestrideComponent,
     LocationComponent,
+    ConfirmTestrideComponent,
   ],
   imports: [
     CommonModule,

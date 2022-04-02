@@ -12,6 +12,8 @@ import Swal from 'sweetalert2'
 export class TestrideComponent implements OnInit {
   public BookrideForm: FormGroup
   public hasError = false
+  vehicleName: any
+  vehicleModel: any
 
   constructor(
     private velectrixservices: VElectrixService,
@@ -29,7 +31,10 @@ export class TestrideComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.vehicleName = localStorage.getItem('VehicleName');
+    this.vehicleModel = localStorage.getItem('VehicleModel')
+  }
   bookride() {
     if (this.BookrideForm.valid) {
       let testrideObj = {
@@ -40,6 +45,8 @@ export class TestrideComponent implements OnInit {
         area: this.BookrideForm.value.area,
         landMark: this.BookrideForm.value.landMark,
         city: this.BookrideForm.value.city,
+        model: this.vehicleModel,
+        vehicleName: this.vehicleName
       }
       console.log('test', testrideObj)
 
@@ -47,12 +54,12 @@ export class TestrideComponent implements OnInit {
         if (loginResp.statusCode == 200) {
           Swal.fire({
             icon: 'success',
-            text: 'Submitted Successfully ',
+            text: 'Test ride is initiated ',
             showConfirmButton: false,
             timer: 3000,
           })
           console.log('data sent')
-          // this.router.navigateByUrl('admin/Dashboard')
+          this.router.navigateByUrl('user/confirm Testride')
         } else {
           Swal.fire({
             icon: 'error',

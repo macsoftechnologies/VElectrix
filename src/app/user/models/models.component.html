@@ -1,52 +1,53 @@
 <div class="Homepage-section">
   <div class="container">
-    <div class="row">
-      <div class="logo">
-        <img src="assets/images/PureVE/models.png" />
-        <sup>7G</sup>
+    <div class="vehiclegetDetail_section" *ngFor="let vehicleData of vehicleData">
+      <div class="row">
+        <div class="logo">
+          <!-- <img src="assets/images/PureVE/models.png" />
+          <sup>7G</sup> -->
+          <h5>{{vehicleData?.model}}</h5>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-2"></div>
-      <div class="col-7">
-        <div class="viewpage">
-          <a>
-            <img
-              src="assets/images/1 - VENROUTE/1 -  PURE EV/EPLUTO 7G _ EPLUTO/Red Epluto.png"
-            />
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-7">
+          <div class="viewpage">
+            <a>
+              <img src="{{baseUrl}}{{vehicleData?.vehicleImage}}" />
 
-            <!-- <i class="far fa-arrow-alt-circle-right"></i> -->
-          </a>
-          <ul class="colorcode">
-            <li><input type="color" value="#ff0000" /></li>
-            <li><input type="color" value="#ffa500" /></li>
-            <li><input type="color" value="#ffff00" /></li>
-            <li><input type="color" value="#001fff" /></li>
-            <li><input type="color" value="#ffffff" /></li>
-            <li><input type="color" value="#808080" /></li>
-            <li><input type="color" value="#000000" /></li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="icons">
-          <mat-icon>favorite_border</mat-icon>
-          <mat-icon>shopping_cart</mat-icon>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <div class="ratetag">
-          <div class="rating">
-            <mat-icon>grade</mat-icon>
-            4.1
+              <!-- <i class="far fa-arrow-alt-circle-right"></i> -->
+            </a>
+            <ul class="colorcode">
+              <li><input type="color" value="#ff0000" /></li>
+              <li><input type="color" value="#ffa500" /></li>
+              <li><input type="color" value="#ffff00" /></li>
+              <li><input type="color" value="#001fff" /></li>
+              <li><input type="color" value="#ffffff" /></li>
+              <li><input type="color" value="#808080" /></li>
+              <li><input type="color" value="#000000" /></li>
+            </ul>
           </div>
         </div>
+        <!-- <div class="col-3">
+          <div class="icons">
+            <mat-icon>favorite_border</mat-icon>
+            <mat-icon>shopping_cart</mat-icon>
+          </div>
+        </div> -->
       </div>
-      <div class="col-6">
-        <div class="ratetag">
-          <div class="amount"><strong>₹ 97,000</strong></div>
+      <div class="row">
+        <div class="col-6">
+          <div class="ratetag">
+            <div class="rating">
+              <mat-icon>grade</mat-icon>
+              4.1
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="ratetag">
+            <div class="amount"><strong>₹ {{vehicleData?.amount}}</strong></div>
+          </div>
         </div>
       </div>
     </div>
@@ -60,6 +61,167 @@
           BOOK A TEST RIDE
         </button>
       </a>
+    </div>
+
+    <div class="vehicle_specifiations">
+      <div class="specs">
+        <h4>Vehicle Specifications:</h4>
+        <form *ngFor="let vecSpecs of vehicleData">
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Vehicle Model:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.model}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Battery:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.battery}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Battery Casing:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.batteryCasing}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Blinkers:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.blinkers}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">BMS:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.bms}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Brake:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.brake}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Brake Lights:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.brakeLights}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Cells:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.cells}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Charging Point:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.chargerOutput}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Controller:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.controller}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Display:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.display}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Gradeablity:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.gradeablity}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Head Lamp:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.headLamp}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Ladies Footrest:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.ladiesFootrest}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Motor:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.motor}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Mud Guards:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.mudGuards}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Regenarative Breaking:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.regenerativeBraking}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Seat:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.seat}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Security:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.security}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Storage:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.storage}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Throttle:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.throttle}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="staticEmail" class="col-xs-6 col-form-label">Tyre:</label>
+            <div class="col-xs-6">
+              <p>{{vecSpecs?.tyre}}</p>
+            </div>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>

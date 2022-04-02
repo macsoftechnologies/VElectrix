@@ -90,6 +90,9 @@
     .logo {
       text-align: center;
       margin: auto;
+      h5 {
+        font-size: 18px;
+      }
       img {
         margin: auto;
         display: inline-block;
@@ -122,6 +125,25 @@
     .amount {
       text-align: center;
       font-size: 18px;
+    }
+
+    .vehicle_specifiations {
+      .specs {
+        h4 {
+          font-size: 20px;
+          margin: 20px 0px 15px 0px;
+          color: #0f6ab5;
+        }
+        .form-group {
+          margin: 0px;
+          label {
+            padding: 10px 0px 0px 0px;
+          }
+          p {
+            padding: 10px 0px 0px 0px;
+          }
+        }
+      }
     }
   }
 }

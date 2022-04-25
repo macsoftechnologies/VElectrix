@@ -1,16 +1,15 @@
-@media (max-width: 480px) {
+@media (max-width: 550px) {
   .Homepage-section {
     margin-bottom: 60px;
     .viewpage {
       text-align: center;
-      //   background: #7c7f8324;
       border-radius: 30px;
-      // width: 350px;
       margin: auto;
-      // margin-bottom: 20px;
       img {
         width: auto;
-        height: 260px;
+        height: 175px;
+        margin-bottom: 15px;
+        // padding: 10px 0px 15px 0px;
       }
       h6 {
         color: black;
@@ -31,19 +30,25 @@
       ul.colorcode {
         display: inline-block;
         margin-bottom: 5px;
+        img {
+          height: 23px;
+          width: 23px;
+          border-radius: 50%;
+          padding: 3px;
+        }
       }
-      ul.colorcode li {
-        float: left;
-        margin-right: 5px;
-      }
-      ul.colorcode li input {
-        width: 20px;
-        height: 24px;
-        border: none;
-        outline: none;
-        box-shadow: none;
-        background: transparent;
-      }
+      // ul.colorcode li {
+      //   float: left;
+      //   margin-right: 5px;
+      // }
+      // ul.colorcode li input {
+      //   width: 20px;
+      //   height: 24px;
+      //   border: none;
+      //   outline: none;
+      //   box-shadow: none;
+      //   background: transparent;
+      // }
     }
     .icons {
       display: grid;
@@ -63,28 +68,30 @@
       font-size: 24px;
     }
     .locatebtn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
       button.btn.btn-dark {
-        font-size: 11px;
-        width: 50%;
-        height: 38px;
-        border-radius: 0px;
-        box-shadow: none;
-        outline: none;
-        color: white;
-        background: black;
-        border: none;
+        background: #f4f5fa;
+        color: #13478c;
+        height: 45px;
+        width: 50px;
+        border-radius: 5px;
+        i {
+          font-size: 17px;
+        }
       }
       button.btn.btn-link {
-        font-size: 11px;
-        width: 50%;
-        height: 38px;
-        border-radius: 0px;
-        box-shadow: none;
         outline: none;
-        border: 1px solid black;
-        color: black;
-        text-decoration: none;
-        background: white;
+        border: none;
+        box-shadow: none;
+        border-radius: 12px;
+        width: 230px;
+        height: 45px;
+        background-color: #28b8e8;
+        background-image: linear-gradient(to right, #2cbae7, #0f347d);
+        color: #fff;
+        font-size: 12px;
       }
     }
     .logo {
@@ -105,21 +112,24 @@
       }
     }
     .ratetag {
-      margin-bottom: 15px;
+      // margin-bottom: 15px;
     }
     .rating {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       width: 60px;
       height: 27px;
       background: #31af08;
       color: white;
       font-size: 14px;
       border-radius: 6px;
-      margin: auto;
+      // margin: auto;
       font-weight: 700;
       .mat-icon {
         font-size: 14px;
-        margin-top: 6px;
+        margin-top: 10px;
+        margin-right: -5px;
       }
     }
     .amount {
@@ -138,12 +148,56 @@
           margin: 0px;
           label {
             padding: 10px 0px 0px 0px;
+            font-size: 12px;
           }
           p {
             padding: 10px 0px 0px 0px;
           }
         }
       }
+    }
+  }
+}
+
+.vehicle_name {
+  // margin-bottom: 15px;
+  .get_model_rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px 0px;
+  }
+  h5 {
+    font-size: 12px;
+    margin: 5px 0px 10px 0px;
+  }
+
+  p {
+    font-size: 15px;
+    font-weight: bold;
+  }
+}
+
+.arrow-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 0px 10px 0px;
+  .arrow {
+    font-size: 17px;
+  }
+}
+
+.colorcode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  li {
+    img {
+      height: 25px;
+      width: 25px;
+      border-radius: 50%;
+      margin: 0px 5px;
     }
   }
 }

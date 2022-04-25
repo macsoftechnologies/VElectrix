@@ -1,4 +1,4 @@
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 550px) {
   .testridesection {
     .card {
       margin-bottom: 60px;
@@ -31,10 +31,14 @@
             }
             button.btn {
               text-align: center;
-              margin: auto;
-              display: block;
-
-              padding: 10px 30px;
+              outline: none;
+              border: none;
+              box-shadow: none;
+              border-radius: 50px;
+              width: 130px;
+              height: 40px;
+              background-color: #28b8e8;
+              background-image: linear-gradient(to right, #2cbae7, #0f347d);
             }
           }
         }

@@ -30,16 +30,14 @@ export class PureVEComponent implements OnInit {
     this.VElectrixServices.getvehiclesByID(vehicleObj).subscribe((vehicleResp) => {
       console.log("Brand Data", vehicleResp);
       if(vehicleResp.StatusCode == 200) {
-        this.getallVehicleDetails = vehicleResp.vehicleDetails
+        this.getallVehicleDetails = vehicleResp.brandResponse
       }
     })
   }
 
   // Goto Vehicle Details
   GotoVehicleDetails(data: any) {
-    localStorage.setItem("VehiclecolorID", data.colorId);
-    localStorage.setItem("VehicleName", data.vehicleName);
-    localStorage.setItem("VehicleModel", data.model)
+    localStorage.setItem("VehicleID", data.vehicleId)
     this.router.navigateByUrl('user/Models');
   }
 

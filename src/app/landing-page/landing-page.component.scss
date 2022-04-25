@@ -1,25 +1,32 @@
-@media only screen and (max-width: 480px) {
-  .logo-landingpage {
-    .logos {
-      text-align: center;
-      margin-top: 90px;
-    }
-    .button-next {
-      text-align: center;
-      button.btn {
-        outline: none;
-        border: none;
-        box-shadow: none;
-        border-radius: 50px;
-        width: 130px;
-        height: 40px;
-        background-color: #28b8e8;
-        background-image: linear-gradient(to right, #2cbae7, #0f347d);
-        i {
-          line-height: 28px;
-          color: white;
+@media only screen and (max-width: 550px) {
+  .landingPage_section {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    .logo-landingpage {
+      .logos {
+        text-align: center;
+      }
+      .button-next {
+        text-align: center;
+        button.btn {
+          outline: none;
+          border: none;
+          box-shadow: none;
+          border-radius: 50px;
+          width: 130px;
+          height: 40px;
+          background-color: #28b8e8;
+          background-image: linear-gradient(to right, #2cbae7, #0f347d);
+          i {
+            line-height: 28px;
+            color: white;
+          }
         }
       }
     }
   }
+  
 }

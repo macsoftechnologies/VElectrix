@@ -25,13 +25,20 @@ export class VElectrixService {
 
   // getVehicles By ID
   public getvehiclesByID(data: any): Observable<any> {
-    return this.httpClient.post(environment.baseUrl + "vehicle/getBrandVehicle", data)
+    return this.httpClient.post(environment.baseUrl + "color-mapping/getBrandVehicles", data)
   }
 
-  // Get Vehicle Details By ID
-  public getVehicleDetailsById(data: any): Observable<any> {
-    return this.httpClient.post(environment.baseUrl + "vehicle/getVehicleImage", data);
+  // Get Vehicle Specifications By VEH ID
+  public getvehicleSpecs(data: any): Observable<any> {
+    return this.httpClient.post(environment.baseUrl + "color-mapping/getSpec", data)
   }
+
+  // get vehicle Images by Vehicle ID
+  public getVehiclecolorImages(data: any): Observable<any> {
+    return this.httpClient.post(environment.baseUrl + "color-mapping/getVehicleColor", data)
+  }
+
+  
 }
 
 

@@ -47,20 +47,21 @@ export class ModelsComponent implements OnInit {
     })
   } 
 
-  customOptions: OwlOptions = {
+  customOptions: any = {
     loop: true,
+    autoplay: false,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: true,
     dots: false,
-    navSpeed: 700,
+    navSpeed: 5000,
     navText: ['', ''],
     responsive: {
       0: {
         items: 1
       },
       300: {
-        items: 3
+        items: 2
       },
       400: {
         items: 3
@@ -77,4 +78,6 @@ export class ModelsComponent implements OnInit {
     },
     nav: false
   }
+
+  
 }

@@ -69,24 +69,27 @@
   .menu {
     transition: 0.3s ease-in-out;
     transform: translateX(-500px);
-    height: 375px;
+    // height: 375px;
+    height: 455px;
     position: fixed !important;
-    z-index: 1;
+    z-index: 9999;
     top: 65px;
     display: flex;
     flex-direction: column;
     left: 0px;
     padding: 20px 0;
-    width: 60%;
+    // width: 60%;
+    width: 65%;
     border-radius: 30px;
     // height: 100%;
     // box-shadow: 0 0 11px 4px rgb(43 40 40 / 17%);
     border: 3px solid #edededf0;
     background: white;
+    margin-bottom: 0px!important;
   }
 
   .menu li {
-    margin: 0px 10px 20px 10px;
+    margin: 0px 20px 20px 20px;
   }
   .menu li img {
     width: 150px;

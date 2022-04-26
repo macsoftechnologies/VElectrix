@@ -84,44 +84,46 @@
 
     </div>
 
-    <owl-carousel-o [options]="customOptions">
+  <div class="specs-carousel-sec">
+    <owl-carousel-o [options]="customOptions" *ngFor="let vhspecs of getVehicleSpecs;"> 
       <ng-template carouselSlide>
         <div class="specs-box">
-          <p>Max Speed</p>
-        <p><b>60</b>&nbsp;km/hr</p>
+          <p>Battery</p>
+        <p><b>{{vhspecs?.battery}}</b></p>
         </div>
       </ng-template>  
       <ng-template carouselSlide>
         <div class="specs-box">
-          <p>Max Load</p>
-        <p><b>100</b>&nbsp;Kg</p>
+          <p>Display</p>
+        <p><b>{{vhspecs?.display}}</b></p>
         </div>
       </ng-template>  
       <ng-template carouselSlide>
         <div class="specs-box">
-          <p>Max Distance</p>
-        <p><b>98</b>&nbsp;Km</p>
+          <p>Head Lamp</p>
+        <p><b>{{vhspecs?.headLamp}}</b></p>
         </div>
       </ng-template>
+      <!-- <ng-template carouselSlide>
+        <div class="specs-box">
+          <p>Charge Output</p>
+        <p><b>{{vhspecs?.chargerOutput}}</b></p>
+        </div>
+      </ng-template>   -->
       <ng-template carouselSlide>
         <div class="specs-box">
-          <p>Max Speed</p>
-        <p><b>60</b>&nbsp;km/hr</p>
+          <p>BatteryCasing</p>
+        <p><b>{{vhspecs?.batteryCasing}}</b></p>
         </div>
       </ng-template>  
       <ng-template carouselSlide>
         <div class="specs-box">
-          <p>Max Load</p>
-        <p><b>100</b>&nbsp;Kg</p>
-        </div>
-      </ng-template>  
-      <ng-template carouselSlide>
-        <div class="specs-box">
-          <p>Max Distance</p>
-        <p><b>98</b>&nbsp;Km</p>
+          <p>Gradeablity</p>
+        <p><b>{{vhspecs?.gradeablity}}</b></p>
         </div>
       </ng-template>
-    </owl-carousel-o>
+    </owl-carousel-o> 
+  </div>
 
     <div class="locatebtn">
       <a [routerLink]="['/user/Testride']">

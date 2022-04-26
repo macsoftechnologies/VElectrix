@@ -13,6 +13,7 @@ import { RequestasstComponent } from './requestasst/requestasst.component'
 import { MatIconModule } from '@angular/material/icon'
 import { FormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http'
     MatIconModule,
     FormsModule,
     HttpClientModule,
+    CarouselModule, 
   ],
   providers: [],
   bootstrap: [AppComponent],

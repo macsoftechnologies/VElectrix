@@ -18,7 +18,7 @@ import { LocationComponent } from './location/location.component'
 import { MatIconModule } from '@angular/material/icon'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ConfirmTestrideComponent } from './confirm-testride/confirm-testride.component'
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 @NgModule({
   declarations: [
     UserComponent,
@@ -43,6 +43,7 @@ import { ConfirmTestrideComponent } from './confirm-testride/confirm-testride.co
     MatIconModule,
     ReactiveFormsModule,
     FormsModule,
+    CarouselModule,
   ],
 })
 export class UserModule {}

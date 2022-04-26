@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { forkJoin } from 'rxjs';
 import { VElectrixService } from 'src/app/Services/velectrix.service';
 import { environment } from 'src/environments/environment';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
   selector: 'app-models',
@@ -45,4 +46,35 @@ export class ModelsComponent implements OnInit {
         console.log("vehspecs", this.getVehicleSpecs)
     })
   } 
+
+  customOptions: OwlOptions = {
+    loop: true,
+    mouseDrag: true,
+    touchDrag: true,
+    pullDrag: true,
+    dots: false,
+    navSpeed: 700,
+    navText: ['', ''],
+    responsive: {
+      0: {
+        items: 1
+      },
+      300: {
+        items: 3
+      },
+      400: {
+        items: 3
+      },
+      550: {
+        items: 3
+      },
+      740: {
+        items: 3
+      },
+      940: {
+        items: 4
+      }
+    },
+    nav: false
+  }
 }

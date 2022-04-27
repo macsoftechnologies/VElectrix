@@ -15,13 +15,13 @@
       </div>
 
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <!-- <ul class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active">
-            <img src="https://www.w3schools.com/bootstrap4/chicago.jpg" height="20" width="20"> 
+        <ul class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="i" class="colo"  *ngFor="let vehicleColors of getVehicleColors;let i = index;" [ngClass]="{ active: i == 0 }">
+            <img src="{{baseUrl}}{{vehicleColors?.colorImage}}" height="20" width="20"> 
           </li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ul> -->
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> -->
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+        </ul>
         <div class="carousel-inner viewpage">
           <div class="carousel-item" *ngFor="let vehicleColors of getVehicleColors; let i = index"
             [ngClass]="{ active: i == 0 }">
@@ -47,11 +47,11 @@
         </a>
       </div>
 
-      <ul class="colorcode">
+      <!-- <ul class="colorcode">
         <li *ngFor="let vehicleColors of getVehicleColors;">
           <img src="{{baseUrl}}{{vehicleColors?.colorImage}}">
         </li>
-      </ul>
+      </ul> -->
       <!-- <div class="row" *ngFor="let vehicleColors of getVehicleColors">
         <div class="col-12">
           <div class="viewpage">

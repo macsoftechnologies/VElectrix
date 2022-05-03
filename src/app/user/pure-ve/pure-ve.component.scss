@@ -5,7 +5,7 @@
       text-align: center;
       background: #7c7f8324;
       border-radius: 30px;
-      width: 350px;
+      width: 325px;
       margin: auto;
       // margin-bottom: 20px;
       // margin-right: 10px;
@@ -41,7 +41,7 @@
         // margin: auto;
         display: block;
         // width: 180px;
-        height: 50px;
+        height: 70px;
         // margin-bottom: 15px;
       }
     }
@@ -69,4 +69,9 @@
 }
 .carousel-control.left {
   left: 20px;
+}
+.flex-dir{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

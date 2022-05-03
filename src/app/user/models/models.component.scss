@@ -220,6 +220,9 @@
 
 .carousel-indicators {
   bottom: -40px;
+  .carousel-indicators li{
+    opacity: 0.3!important;
+  }
 }
 
 #carouselExampleIndicators {
@@ -240,9 +243,10 @@
     /* background-clip: padding-box; */
     /* border-top: 10px solid transparent; */
     /* border-bottom: 10px solid transparent; */
-    opacity: .5;
+    opacity: 2;
     /* transition: opacity .6s ease; */
     display: flex;
     left: 0;
     margin-right: 15px;
+    border-radius: 50%;
 }

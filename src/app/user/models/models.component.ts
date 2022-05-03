@@ -22,6 +22,7 @@ export class ModelsComponent implements OnInit {
   getPrice: any;
   getModel: any;
   getvehicleName: any;
+  currentID: any = 0;
 
   constructor(private vElectrixServices: VElectrixService, private router: Router) { }
 
@@ -36,16 +37,16 @@ export class ModelsComponent implements OnInit {
     }
     forkJoin(this.vElectrixServices.getvehicleSpecs(vehicleDetailsObj), this.vElectrixServices.getVehiclecolorImages(vehicleDetailsObj)).subscribe((vehRESP) => {
       // console.log("REPSONSE", vehRESP)
-        this.getVehicleSpecs = vehRESP[0].colorMappingResponse;        
-        this.getVehicleColors = vehRESP[1].colorMappingResponse;
-        this.getPrice = vehRESP[0].colorMappingResponse[0].amount
-        this.getModel = vehRESP[0].colorMappingResponse[0].model
-        this.getvehicleName = vehRESP[0].colorMappingResponse[0].vehicleName
-        console.log("price", this.getPrice)
-        console.log("vehcolors", this.getVehicleColors)
-        console.log("vehspecs", this.getVehicleSpecs)
+      this.getVehicleSpecs = vehRESP[0].colorMappingResponse;
+      this.getVehicleColors = vehRESP[1].colorMappingResponse;
+      this.getPrice = vehRESP[0].colorMappingResponse[0].amount
+      this.getModel = vehRESP[0].colorMappingResponse[0].model
+      this.getvehicleName = vehRESP[0].colorMappingResponse[0].vehicleName
+      console.log("price", this.getPrice)
+      console.log("vehcolors", this.getVehicleColors)
+      console.log("vehspecs", this.getVehicleSpecs)
     })
-  } 
+  }
 
   customOptions: any = {
     loop: true,
@@ -79,5 +80,14 @@ export class ModelsComponent implements OnInit {
     nav: false
   }
 
-  
+  colorI(ID: any) {
+    this.currentID = ID;
+    setTimeout(() => {
+      this.currentID = 0;
+    }, 100);
+
+    console.log("current", this.currentID)
+  }
+
+
 }

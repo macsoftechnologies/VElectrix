@@ -38,6 +38,11 @@ export class VElectrixService {
     return this.httpClient.post(environment.baseUrl + "color-mapping/getVehicleColor", data)
   }
 
+  // get Chargers List 
+  public getChargerList(): Observable<any> {
+    return this.httpClient.get(environment.baseUrl + "v-energy/listOfChargerss")
+  }
+
   
 }
 

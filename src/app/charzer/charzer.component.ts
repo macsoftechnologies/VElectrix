@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./charzer.component.scss']
 })
 export class CharzerComponent implements OnInit {
-
+ 
   constructor() { }
 
   ngOnInit(): void {

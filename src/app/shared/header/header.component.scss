@@ -70,7 +70,7 @@
     transition: 0.3s ease-in-out;
     transform: translateX(-500px);
     // height: 375px;
-    height: 455px;
+    height: 460px;
     position: fixed !important;
     z-index: 9999;
     top: 65px;
@@ -121,3 +121,181 @@
   //   font-size: 23px;
   // }
 }
+
+
+/* CSS Document */
+
+.header-banner {
+    // box-shadow: 0 1px 6px rgba(32,33,36,.28);
+    // border-color: rgba(223,225,229,0);
+    @media screen and (max-width:992px) {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+    nav {
+        margin:0;
+        padding: 0;
+        background-color: #fff;
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            .nav-section {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 60px;
+                .logo {
+                    img {
+                        height: 100px;
+                        width: 150px;
+                    }
+                }
+                .navlinks-section {
+                    .menu {
+                        background: #fff;
+                        float: right;
+                        padding:0;
+                        margin:0;
+                        list-style: none;
+                        position: relative;
+                        li {
+                            margin: 0px;
+                            display: inline-block;
+                            float: left;
+                            background-color: #fff;
+                            border-radius: 30px;
+                            a {
+                                display:block;
+                                padding:14px 15px;	
+                                color: #000;
+                                font-size:16px;
+                                text-decoration:none;
+                                display: flex;
+                                &:hover {
+                                    background: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.toggle,
+[id^=drop] {
+	display: none;
+}
+nav:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
+
+nav ul li ul li:hover { background: #000000; }
+
+/* Background color change on Hover */
+nav a:hover { 
+	background-color: #000000; 
+}
+nav ul ul {
+	display: none;
+	position: absolute; 
+}
+
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+nav ul ul ul li {
+	position: relative;
+	top:-60px;
+	/* has to be the same number as the "width" of "nav ul ul li" */ 
+	left:170px; 
+}
+
+	
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+.menu-icon {
+    display: none;
+    @media (max-width:992px) {
+        display: block;
+    }
+}
+@media (max-width:992px) {
+    .navlinks-section {
+        position: relative;
+        .menu-icon {
+            &:hover {
+                cursor: pointer;
+            }
+            i {
+                font-size: 22px;
+            }
+        }
+    }
+    .menu {
+        transition: 0.3s ease-in-out;
+        // transform: translateX(400px);
+        // height: 100%;
+        position: fixed !important;
+        z-index: 1;
+        width: 0;
+        top: 120px;
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        top: 60px;
+        li {
+            display: block;
+            &:hover {
+                // background-color: #0ca332 !important;
+                color: #000000 !important;
+                cursor: pointer;
+            }
+            a {
+                color: #fff;
+                &:hover {
+                    // background-color: #0ca332 !important;
+                    color: #000000 !important;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .open-menu {
+        // transform: translateX(0);
+        width: 250px;
+    }
+
+    .logo {
+        padding: 10px 0px;
+        img {
+            height: 100px;
+            width: 130px !important;
+        }
+    }
+    .close-icon {
+        &::before{
+            content: "\f00d";
+            font-family: FontAwesome;
+            font-size: 25px;
+        }
+    }
+
+}
+

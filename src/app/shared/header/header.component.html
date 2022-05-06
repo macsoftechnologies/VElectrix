@@ -1,75 +1,33 @@
-<div class="responsive-menu-header">
-  <div class="menu_section">
-    <div class="menu-icon" (click)="showMenu()">
-      <!-- <i class="fa fa-bars open-icon"></i> -->
-      <span class="open-icon"><mat-icon>notes</mat-icon></span>
-
-      <!-- <div class="close-icon"><i class="fa fa-close"></i></div> -->
-    </div>
-    <ul class="menu">
-      <li>
-        <a [routerLink]="['/user/Home']">
-          <img src="assets/images/menulogo.png" />
-        </a>
-      </li>
-
-      <li class="">
-        <a [routerLink]="['/user/VEnroute']">
-          V-ENROUTE
-          <mat-icon>motorcycle</mat-icon>
-        </a>
-      </li>
-      <li class="">
-        <a [routerLink]="['/user/VEnergy']">
-          V-ENERGY
-          <mat-icon>battery_charging_full</mat-icon>
-        </a>
-      </li>
-      <!-- <li class="sub_drop">
-        <a href="">Seeds-Seedlings</a>
-        <ul class="dropdown-nav">
-          <li>
-            <a href="">Lawn Care</a>
-          </li>
-          <li class="hassub">
-            <a href="">Walling &amp; Fencing</a>
-            <ul class="drop_sub">
-              <li><a href="">Lawn Care</a></li>
-              <li><a href="">Walling &amp; Fencing</a></li>
-              <li><a href="">Landscape design</a></li>
-              <li><a href="">Grounds Maintenance</a></li>
-            </ul>
-          </li>
-          <li><a href="">Landscape design</a></li>
-          <li class="hassub">
-            <a href="">Grounds Maintenance</a>
-            <ul class="drop_sub">
-              <li><a href="">Lawn Care</a></li>
-              <li><a href="">Walling &amp; Fencing</a></li>
-              <li><a href="">Landscape design</a></li>
-              <li><a href="">Grounds Maintenance</a></li>
-            </ul>
-          </li>
-        </ul>
-      </li> -->
-      <li class="">
-        <a [routerLink]="['/user/VEase']">
-          V-EASE
-          <i class="fas fa-tools"></i>
-        </a>
-      </li>
-      <li class="">
-        <a href="">
-          V-EQUIPMENT
-          <i class="fa fa-box"></i>
-        </a>
-      </li>
-      <li class="">
-        <a href="">
-          V-ESSENTIAL
-          <mat-icon>laptop_chromebook</mat-icon>
-        </a>
-      </li>
-    </ul>
-  </div>
+<div class="header-banner">
+  <nav>
+      <div class="container">
+          <div class="nav-section">
+              <div class="navlinks-section">
+                  <!-- <label for="drop" class="toggle">Menu</label>
+                  <input type="checkbox" id="drop" /> -->
+                  <div class="menu-icon" (click)="showMenu()">
+                      <i class="#"><mat-icon>notes</mat-icon></i>
+                  </div>
+                  <ul class="menu">
+                    <li>
+                      <a [routerLink]="['/user/Home']" (click)="showMenu()">
+                        <img src="assets/images/menulogo.png" />
+                      </a>
+                    </li>
+                      <li><a  [routerLink]="['/user/VEnroute']" (click)="showMenu()"> V-ENROUTE
+                        <mat-icon>motorcycle</mat-icon></a></li>
+                      <li><a [routerLink]="['/user/VEnergy']" (click)="showMenu()"> V-ENERGY
+                        <mat-icon>battery_charging_full</mat-icon></a></li>
+                      <li><a [routerLink]="['/user/VEase']" (click)="showMenu()"> V-EASE
+                        <i class="fas fa-tools"></i></a></li>
+                      <li><a (click)="showMenu()"> V-EQUIPMENT
+                        <i class="fa fa-box"></i></a></li>
+                      <li><a (click)="showMenu()"> V-ESSENTIAL
+                        <mat-icon>laptop_chromebook</mat-icon></a></li>
+                    
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </nav>
 </div>

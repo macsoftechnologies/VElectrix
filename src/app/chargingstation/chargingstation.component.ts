@@ -38,12 +38,14 @@ export class ChargingstationComponent implements OnInit {
         new google.maps.Marker({
           position: new google.maps.LatLng(marker.latitude, marker.longitude),
           map,
+          icon: "../assets/images/pointer.png"
         })
       })
       this.marker = new google.maps.Marker({
         position: this.myLatlng,
         map,
         title: "Hello World!",
+        icon: "../assets/images/pointer.png"
       });
     }
   }

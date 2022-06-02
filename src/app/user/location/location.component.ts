@@ -14,16 +14,20 @@ export class LocationComponent implements OnInit {
   ChargerList: any;
   getPoints = [];
   markerslengths: any;
-  locationPoints: any =[];
+  locationPoints: any = [];
+  getStoreDetailsList: any;
+  storeLocationPoints: any;
+  storeIcon: any;
+  storeiconn: any;
 
   constructor(private vElectrixSerivces: VElectrixService, private router: Router) { }
 
   ngOnInit(): void {
-    this.getChargersList();
-
+    // this.getChargersList();
+    this.getStoreList();
   }
 
-  getLocation(){
+  getLocation() {
     const mapElement = document.getElementById('map')
     if (mapElement) {
       const map = new google.maps.Map(mapElement, {
@@ -49,16 +53,41 @@ export class LocationComponent implements OnInit {
     }
   }
 
-  getChargersList() {
-    this.vElectrixSerivces.getChargerList().subscribe((chargerResp) => {
-      if(chargerResp.StatusCode == 200) {
-        this.ChargerList = chargerResp?.Data?.UserDetails
-        console.log("list",this.ChargerList)
-         this.ChargerList.forEach((item:any) => {
+  // getChargersList() {
+  //   this.vElectrixSerivces.getChargerList().subscribe((chargerResp) => {
+  //     if(chargerResp.StatusCode == 200) {
+  //       this.ChargerList = chargerResp?.Data?.UserDetails
+  //       console.log("list",this.ChargerList)
+  //        this.ChargerList.forEach((item:any) => {
+  //         this.locationPoints.push(item.location)
+  //       });
+  //       this.getLocation()
+  //       console.log("arr",this.locationPoints)
+  //     }
+  //   })
+  // }
+
+
+  getStoreList() {
+    this.vElectrixSerivces.getStoreList().subscribe((storeResp) => {
+      if (storeResp.StatusCode == 200) {
+        this.getStoreDetailsList = storeResp?.Data?.storesList
+
+        console.log("Array", this.getStoreDetailsList)
+
+        this.getStoreDetailsList.forEach((item: any) => {
           this.locationPoints.push(item.location)
         });
-        this.getLocation()
-        console.log("arr",this.locationPoints)
+
+        this.getStoreDetailsList.forEach((item: any) => {
+          this.locationPoints.push(item.storeIcon)
+          this.storeiconn = item.storeIcon
+        })
+
+        
+
+        this.getLocation();
+        // console.log("Points", this.storeLocationPoints)
       }
     })
   }

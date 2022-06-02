@@ -23,6 +23,7 @@ export class ModelsComponent implements OnInit {
   getModel: any;
   getvehicleName: any;
   currentID: any = 0;
+  getvehicleImage: any;
 
   constructor(private vElectrixServices: VElectrixService, private router: Router) { }
 
@@ -42,10 +43,17 @@ export class ModelsComponent implements OnInit {
       this.getPrice = vehRESP[0].colorMappingResponse[0].amount
       this.getModel = vehRESP[0].colorMappingResponse[0].model
       this.getvehicleName = vehRESP[0].colorMappingResponse[0].vehicleName
+      this.getvehicleImage = vehRESP[0].colorMappingResponse[0].vehicleImage
       console.log("price", this.getPrice)
       console.log("vehcolors", this.getVehicleColors)
       console.log("vehspecs", this.getVehicleSpecs)
     })
+  }
+
+  testRide() {
+    this.router.navigateByUrl('/user/Testride')
+    localStorage.setItem('VehName', this.getvehicleName)
+    localStorage.setItem('vehicleImage', this.getvehicleImage)
   }
 
   customOptions: any = {

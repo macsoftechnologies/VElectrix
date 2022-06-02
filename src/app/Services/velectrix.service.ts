@@ -43,6 +43,11 @@ export class VElectrixService {
     return this.httpClient.get(environment.baseUrl + "v-energy/listOfChargerss")
   }
 
+  // get Store List
+  public getStoreList(): Observable<any> {
+    return this.httpClient.get(environment.baseUrl + "stores/storeList");
+  }
+
   
 }
 

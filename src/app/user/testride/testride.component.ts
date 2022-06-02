@@ -14,6 +14,7 @@ export class TestrideComponent implements OnInit {
   public hasError = false
   vehicleName: any
   vehicleModel: any
+  vehicleimage: any
 
   constructor(
     private velectrixservices: VElectrixService,
@@ -32,8 +33,12 @@ export class TestrideComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.vehicleName = localStorage.getItem('VehicleName');
-    this.vehicleModel = localStorage.getItem('VehicleModel')
+    this.vehicleName = localStorage.getItem('Veh Name');
+    console.log("vehicle", this.vehicleName)
+    this.vehicleModel = localStorage.getItem('BrandName')
+    console.log("Brand", this.vehicleModel)
+    this.vehicleimage = localStorage.getItem('vehicleImage')
+    console.log("image", this.vehicleimage)
   }
   bookride() {
     if (this.BookrideForm.valid) {
@@ -46,7 +51,8 @@ export class TestrideComponent implements OnInit {
         landMark: this.BookrideForm.value.landMark,
         city: this.BookrideForm.value.city,
         model: this.vehicleModel,
-        vehicleName: this.vehicleName
+        vehicleName: this.vehicleName,
+        vehicleImage: this.vehicleimage
       }
       console.log('test', testrideObj)
 

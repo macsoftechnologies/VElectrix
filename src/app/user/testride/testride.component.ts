@@ -42,21 +42,36 @@ export class TestrideComponent implements OnInit {
   }
   bookride() {
     if (this.BookrideForm.valid) {
-      let testrideObj = {
-        name: this.BookrideForm.value.name,
-        aadharNo: this.BookrideForm.value.aadharNo,
-        contactNo: this.BookrideForm.value.contactNo,
-        address: this.BookrideForm.value.address,
-        area: this.BookrideForm.value.area,
-        landMark: this.BookrideForm.value.landMark,
-        city: this.BookrideForm.value.city,
-        model: this.vehicleModel,
-        vehicleName: this.vehicleName,
-        vehicleImage: this.vehicleimage
+      const bookrideUpdate = new FormData
+      bookrideUpdate.append('name', this.BookrideForm.value.name)
+      bookrideUpdate.append('aadharNo', this.BookrideForm.value.aadharNo)
+      bookrideUpdate.append('contactNo', this.BookrideForm.value.contactNo)
+      bookrideUpdate.append('address', this.BookrideForm.value.address)
+      bookrideUpdate.append('area', this.BookrideForm.value.area)
+      bookrideUpdate.append('landMark', this.BookrideForm.value.landMark)
+      bookrideUpdate.append('city', this.BookrideForm.value.city)
+      bookrideUpdate.append('model', this.BookrideForm.value.vehicleModel)
+      bookrideUpdate.append('vechicleName', this.vehicleName)
+      if(this.vehicleimage) {
+        bookrideUpdate.append('vechicleImage', this.vehicleimage)
       }
-      console.log('test', testrideObj)
+      
 
-      this.velectrixservices.bookride(testrideObj).subscribe((loginResp) => {
+      // let testrideObj = {
+      //   name: this.BookrideForm.value.name,
+      //   aadharNo: this.BookrideForm.value.aadharNo,
+      //   contactNo: this.BookrideForm.value.contactNo,
+      //   address: this.BookrideForm.value.address,
+      //   area: this.BookrideForm.value.area,
+      //   landMark: this.BookrideForm.value.landMark,
+      //   city: this.BookrideForm.value.city,
+      //   model: this.vehicleModel,
+      //   vehicleName: this.vehicleName,
+      //   vehicleImage: this.vehicleimage
+      // }
+      // console.log('test', testrideObj)
+
+      this.velectrixservices.bookride(bookrideUpdate).subscribe((loginResp) => {
         if (loginResp.statusCode == 200) {
           Swal.fire({
             icon: 'success',
@@ -78,4 +93,5 @@ export class TestrideComponent implements OnInit {
       console.log('error caught')
     }
   }
+
 }

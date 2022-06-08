@@ -1,16 +1,16 @@
 <div class="responsive-filters d-block d-md-none">
   <div class="filter-btn">
-    <button [routerLink]="['/user/Home']">
+    <button class="search-btn" [routerLink]="['/user/Home']">
       <mat-icon>search</mat-icon>
       <!-- <p>Cart</p> -->
     </button>
     <button>
-      <mat-icon aria-hidden="true" aria-label="Example home icon">
+      <mat-icon aria-hidden="true" [routerLink]="['/user/Home']" aria-label="Example home icon">
         home
       </mat-icon>
       <!-- <p>Home</p> -->
     </button>
-    <button>
+    <button class="person-btn">
       <mat-icon>person</mat-icon>
       <!-- <p>My Account</p> -->
     </button>

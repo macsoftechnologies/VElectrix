@@ -1,18 +1,23 @@
 <div class="responsive-filters d-block d-md-none">
   <div class="filter-btn">
     <button class="search-btn" [routerLink]="['/user/Home']">
-      <mat-icon>search</mat-icon>
+      <!-- <mat-icon>search</mat-icon> -->
       <!-- <p>Cart</p> -->
+      <img src="../../../assets/images/Icons/search-icon-magnifier.png" width="23px"/>
     </button>
-    <button>
-      <mat-icon aria-hidden="true" [routerLink]="['/user/Home']" aria-label="Example home icon">
+    <button [routerLink]="['/user/Home']">
+      <!-- <mat-icon aria-hidden="true"  aria-label="Example home icon">
         home
-      </mat-icon>
+      </mat-icon> -->
       <!-- <p>Home</p> -->
+      <img src="../../../assets/images/Icons/Home Icon.png" width="23px"/>
+
     </button>
     <button class="person-btn">
-      <mat-icon>person</mat-icon>
+      <!-- <mat-icon>person</mat-icon> -->
       <!-- <p>My Account</p> -->
+      <img src="../../../assets/images/Icons/Profile icon.png" width="30px"/>
+
     </button>
   </div>
 </div>

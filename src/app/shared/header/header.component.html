@@ -6,7 +6,9 @@
                   <!-- <label for="drop" class="toggle">Menu</label>
                   <input type="checkbox" id="drop" /> -->
                   <div class="menu-icon" (click)="showMenu()">
-                      <i class="#"><mat-icon>notes</mat-icon></i>
+                      <!-- <i class="#"><mat-icon>notes</mat-icon></i> -->
+                      <img src="../../../assets/images/Icons/Menu Icon.png" width="27px"/>
+
                   </div>
                   <ul class="menu">
                     <li>
@@ -14,16 +16,21 @@
                         <img src="assets/images/menulogo.png" />
                       </a>
                     </li>
-                      <li><a  [routerLink]="['/user/VEnroute']" (click)="showMenu()"> V-ENROUTE
-                        <mat-icon>motorcycle</mat-icon></a></li>
-                      <li><a [routerLink]="['/user/VEnergy']" (click)="showMenu()"> V-ENERGY
-                        <mat-icon>battery_charging_full</mat-icon></a></li>
-                      <li><a [routerLink]="['/user/VEase']" (click)="showMenu()"> V-EASE
-                        <i class="fas fa-tools"></i></a></li>
-                      <li><a (click)="showMenu()"> V-EQUIPMENT
-                        <i class="fa fa-box"></i></a></li>
-                      <li><a (click)="showMenu()"> V-ESSENTIAL
-                        <mat-icon>laptop_chromebook</mat-icon></a></li>
+                      <li><a  [routerLink]="['/user/VEnroute']" (click)="showMenu()"><p class="tittle">V-ENROUTE</p>
+                        <img src="../../../assets/images/sideBar_Icons/V-Enroute.png" class="icon-img" />
+                        </a></li>
+                      <li><a [routerLink]="['/user/VEnergy']" (click)="showMenu()"><p class="tittle"> V-ENERGY</p>
+                        <img src="../../../assets/images/sideBar_Icons/V-Energy.png" class="icon-img" />
+                      </a></li>
+                      <li><a [routerLink]="['/user/VEase']" (click)="showMenu()"><p class="tittle">V-EASE</p> 
+                        <img src="../../../assets/images/sideBar_Icons/V-Ease.png" class="icons-imgs" />
+                      </a></li>
+                      <li><a (click)="showMenu()"><p class="tittle">V-EQUIPMENT</p> 
+                        <img src="../../../assets/images/sideBar_Icons/V-Equipment.png" class="icon-img" />
+                      </a></li>
+                      <li><a (click)="showMenu()"><p class="tittle">V-ESSENTIAL</p> 
+                        <img src="../../../assets/images/sideBar_Icons/V-Essentials.png" class="icon-img" />
+                      </a></li>
                     
                   </ul>
               </div>

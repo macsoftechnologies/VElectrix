@@ -171,7 +171,7 @@
                                 color: #000;
                                 font-size:16px;
                                 text-decoration:none;
-                                display: flex;
+                                // display: flex;
                                 &:hover {
                                     background: #fff;
                                 }
@@ -234,6 +234,9 @@ li > a:only-child:after { content: ''; }
     display: none;
     @media (max-width:992px) {
         display: block;
+        position: absolute;
+        left: 25px;
+        top: 0px;
     }
 }
 @media (max-width:992px) {
@@ -299,3 +302,23 @@ li > a:only-child:after { content: ''; }
 
 }
 
+@media (max-width:468px){
+    .icon-img{
+        width: 30px!important;
+        margin: 0px!important;
+        float: right;
+    }
+   .tittle {
+        margin-bottom: 0px!important;
+    margin-top: 6px;
+    float: left;
+}
+.icons-imgs{
+    width: 35px!important;
+    margin: 0px!important;
+    float: right;
+    margin-top: 7px!important;
+}
+
+    
+}

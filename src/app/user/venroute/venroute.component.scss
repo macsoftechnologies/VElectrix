@@ -19,7 +19,20 @@
         box-shadow: 0 2px 10px 1px rgb(64 60 67 / 24%);
         border-color: rgba(223, 225, 229, 0);
         padding: 15px 0px;
+        :nth-child(odd) {
+          margin-left: -30px;
+        }
       }
+      
     }
   }
+}
+
+
+.viewpage a:nth-child(odd) {
+  margin-left: -30px;
+}
+
+.viewpage a img:nth-child(even) {
+  margin-right: -30px !important;
 }

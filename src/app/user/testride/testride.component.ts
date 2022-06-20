@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms'
 import { Router } from '@angular/router'
 import { VElectrixService } from 'src/app/Services/velectrix.service'
 import Swal from 'sweetalert2'
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-testride',
@@ -15,6 +16,9 @@ export class TestrideComponent implements OnInit {
   vehicleName: any
   vehicleModel: any
   vehicleimage: any
+  BrandName: any
+
+  baseUrl: string = environment.baseUrl
 
   constructor(
     private velectrixservices: VElectrixService,
@@ -33,10 +37,10 @@ export class TestrideComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.vehicleName = localStorage.getItem('Veh Name');
+    this.vehicleName = localStorage.getItem('VehName');
     console.log("vehicle", this.vehicleName)
-    this.vehicleModel = localStorage.getItem('BrandName')
-    console.log("Brand", this.vehicleModel)
+    this.BrandName = localStorage.getItem('BrandName')
+    console.log("Brand", this.BrandName)
     this.vehicleimage = localStorage.getItem('vehicleImage')
     console.log("image", this.vehicleimage)
   }
@@ -49,12 +53,15 @@ export class TestrideComponent implements OnInit {
       bookrideUpdate.append('address', this.BookrideForm.value.address)
       bookrideUpdate.append('area', this.BookrideForm.value.area)
       bookrideUpdate.append('landMark', this.BookrideForm.value.landMark)
+      console.log("ndjdj", this.BookrideForm.value.landMark)
       bookrideUpdate.append('city', this.BookrideForm.value.city)
-      bookrideUpdate.append('model', this.BookrideForm.value.vehicleModel)
-      bookrideUpdate.append('vechicleName', this.vehicleName)
+      // bookrideUpdate.append('model', this.BookrideForm.value.vehicleModel)
+      bookrideUpdate.append('vehicleName', this.vehicleName)
+      bookrideUpdate.append('brand', this.BrandName)
       if(this.vehicleimage) {
-        bookrideUpdate.append('vechicleImage', this.vehicleimage)
+        bookrideUpdate.append('vehicleImage', this.vehicleimage)
       }
+      console.log("Veh Image", this.vehicleimage)
       
 
       // let testrideObj = {

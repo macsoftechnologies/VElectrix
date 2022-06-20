@@ -15,6 +15,8 @@ export class ChargingstationComponent implements OnInit {
   getPoints = [];
   markerslengths: any;
   locationPoints: any =[];
+  getLatitude: any;
+  getlongitude: any;
   constructor(private vElectrixServices: VElectrixService, private router: Router) { }
 
   ngOnInit(): void {
@@ -36,7 +38,7 @@ export class ChargingstationComponent implements OnInit {
       console.log("markers", markers)
       markers.map((marker: { latitude: number; longitude: number }) => {
         new google.maps.Marker({
-          position: new google.maps.LatLng(marker.latitude, marker.longitude),
+          position: new google.maps.LatLng(this.getLatitude, this.getlongitude),
           map,
           icon: "../assets/images/pointer.png"
         })
@@ -55,6 +57,11 @@ export class ChargingstationComponent implements OnInit {
       if(listResp.StatusCode == 200) {
         
         this.ChargerList = listResp?.Data?.UserDetails
+
+        this.getLatitude = listResp.Data.UserDetails.latitude
+        this.getlongitude = listResp.Data.UserDetails.longitude
+
+
         console.log("list",this.ChargerList)
          this.ChargerList.forEach((item:any) => {
           this.locationPoints.push(item.location)
@@ -62,7 +69,7 @@ export class ChargingstationComponent implements OnInit {
         this.getLocation()
         console.log("arr",this.locationPoints)
         // this.getPoints = Object.assign({}, listResp.Data.UserDetails.location)
-        // this.getPoints = listResp.Data.UserDetails.location
+        
         // console.log("List", this.ChargerList)
         // console.log("points", this.getPoints)
       }

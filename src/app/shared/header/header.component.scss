@@ -83,7 +83,7 @@
     border-radius: 30px;
     // height: 100%;
     // box-shadow: 0 0 11px 4px rgb(43 40 40 / 17%);
-    border: 3px solid #edededf0;
+    // border: 3px solid #edededf0;
     background: white;
     margin-bottom: 0px!important;
   }
@@ -133,7 +133,7 @@
         top: 0;
         z-index: 10;
     }
-    nav {
+        nav {
         margin:0;
         padding: 0;
         background-color: #fff;
@@ -151,6 +151,9 @@
                         width: 150px;
                     }
                 }
+                .logo-imgg{
+                    border: none!important;
+                }
                 .navlinks-section {
                     .menu {
                         background: #fff;
@@ -160,17 +163,22 @@
                         list-style: none;
                         position: relative;
                         li {
-                            margin: 0px;
+                            // margin: 0px;
                             display: inline-block;
                             float: left;
                             background-color: #fff;
-                            border-radius: 30px;
+                            // border-radius: 30px;
+                            margin: 0px 30px 15px -23px;
+                            border: 3px solid #edededf0;
+                            border-radius: 15px;
                             a {
                                 display:block;
-                                padding:14px 15px;	
+                                padding: 5px 15px;	
                                 color: #000;
                                 font-size:16px;
                                 text-decoration:none;
+                                // margin-bottom: 27px;
+                                margin-left: 30px;
                                 // display: flex;
                                 &:hover {
                                     background: #fff;
@@ -236,7 +244,7 @@ li > a:only-child:after { content: ''; }
         display: block;
         position: absolute;
         left: 25px;
-        top: 0px;
+        top: -5px;
     }
 }
 @media (max-width:992px) {
@@ -282,7 +290,7 @@ li > a:only-child:after { content: ''; }
     }
     .open-menu {
         // transform: translateX(0);
-        width: 250px;
+        width: 100%;
     }
 
     .logo {
@@ -309,8 +317,9 @@ li > a:only-child:after { content: ''; }
         float: right;
     }
    .tittle {
-        margin-bottom: 0px!important;
-    margin-top: 6px;
+    //     margin-bottom: 0px!important;
+    // margin-top: 6px;
+    margin: 5px 0px 7px 0px!important;
     float: left;
 }
 .icons-imgs{

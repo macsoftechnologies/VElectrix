@@ -38,18 +38,43 @@ export class ChargingstationComponent implements OnInit {
       console.log("markers", markers)
       markers.map((marker: { latitude: number; longitude: number }) => {
         new google.maps.Marker({
-          position: new google.maps.LatLng(this.getLatitude, this.getlongitude),
+          position: new google.maps.LatLng(marker.latitude, marker.longitude),
           map,
           icon: "../assets/images/pointer.png"
         })
       })
-      this.marker = new google.maps.Marker({
-        position: this.myLatlng,
-        map,
-        title: "Hello World!",
-        icon: "../assets/images/pointer.png"
-      });
+      // this.marker = new google.maps.Marker({
+      //   position: this.myLatlng,
+      //   map,
+      //   title: "Hello World!",
+      //   icon: "../assets/images/pointer.png"
+      // });
     }
+
+    // const mapElement = document.getElementById('map')
+    // if (mapElement) {
+    //   const map = new google.maps.Map(mapElement, {
+    //     center: this.myLatlng,
+    //     zoom: 9
+    //   });
+
+    //   const markers = this.locationPoints
+    //   console.log("markers", markers)
+    //   markers.map((marker: { latitude: number; longitude: number }) => {
+    //     new google.maps.Marker({
+    //       position: new google.maps.LatLng(marker.latitude, marker.longitude),
+    //       map,
+    //       icon: "../assets/images/pointer.png"
+    //     })
+    //   })
+    //   this.marker = new google.maps.Marker({
+    //     position: this.myLatlng,
+    //     map,
+    //     title: "Hello World!",
+    //     icon: "../assets/images/pointer.png"
+    //   });
+    // }
+
   }
 
   getChargersList() {
@@ -64,7 +89,7 @@ export class ChargingstationComponent implements OnInit {
 
         console.log("list",this.ChargerList)
          this.ChargerList.forEach((item:any) => {
-          this.locationPoints.push(item.location)
+          this.locationPoints.push({ longitude: item.longitude, latitude: item.latitude })
         });
         this.getLocation()
         console.log("arr",this.locationPoints)

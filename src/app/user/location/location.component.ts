@@ -44,12 +44,12 @@ export class LocationComponent implements OnInit {
           icon: "../assets/images/pointer.png"
         })
       })
-      this.marker = new google.maps.Marker({
-        position: this.myLatlng,
-        map,
-        title: "Hello World!",
-        icon: "../assets/images/pointer.png"
-      });
+      // this.marker = new google.maps.Marker({
+      //   position: this.myLatlng,
+      //   map,
+      //   title: "Hello World!",
+      //   icon: "../assets/images/pointer.png"
+      // });
     }
   }
 
@@ -76,13 +76,13 @@ export class LocationComponent implements OnInit {
         console.log("Array", this.getStoreDetailsList)
 
         this.getStoreDetailsList.forEach((item: any) => {
-          this.locationPoints.push(item.location)
+          this.locationPoints.push({ longitude: item.longitude, latitude: item.latitude })
         });
 
-        this.getStoreDetailsList.forEach((item: any) => {
-          this.locationPoints.push(item.storeIcon)
-          this.storeiconn = item.storeIcon
-        })
+        // this.getStoreDetailsList.forEach((item: any) => {
+        //   this.locationPoints.push(item.storeIcon)
+        //   this.storeiconn = item.storeIcon
+        // })
 
         
 

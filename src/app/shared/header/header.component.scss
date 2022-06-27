@@ -44,97 +44,96 @@
 //   }
 // }
 @media (max-width: 768px) {
-  .menu_section .menu-icon {
-    display: block;
-    height: 60px;
-  }
+    .menu_section .menu-icon {
+        display: block;
+        height: 60px;
+    }
 
-  .menu ul {
-    display: none;
-  }
+    .menu ul {
+        display: none;
+    }
 
-  .menu-icon .mat-icon {
-    // font-size: 20px;
-    // margin: 20px 25px;
-    line-height: 46px;
-    padding: 13px;
-    font-size: 29px;
-    font-weight: 600;
-  }
+    .menu-icon .mat-icon {
+        // font-size: 20px;
+        // margin: 20px 25px;
+        line-height: 46px;
+        padding: 13px;
+        font-size: 29px;
+        font-weight: 600;
+    }
 
-  .logo img {
-    height: 60px;
-  }
+    .logo img {
+        height: 60px;
+    }
 
-  .menu {
-    transition: 0.3s ease-in-out;
-    transform: translateX(-500px);
-    // height: 375px;
-    height: 460px;
-    position: fixed !important;
-    z-index: 9999;
-    top: 65px;
-    display: flex;
-    flex-direction: column;
-    left: 0px;
-    padding: 20px 0;
-    // width: 60%;
-    width: 65%;
-    border-radius: 30px;
-    // height: 100%;
-    // box-shadow: 0 0 11px 4px rgb(43 40 40 / 17%);
-    // border: 3px solid #edededf0;
-    background: white;
-    margin-bottom: 0px!important;
-  }
+    .menu {
+        transition: 0.3s ease-in-out;
+        transform: translateX(-500px);
+        // height: 375px;
+        height: 460px;
+        position: fixed !important;
+        z-index: 9999;
+        top: 65px;
+        display: flex;
+        flex-direction: column;
+        left: 0px;
+        padding: 20px 0;
+        // width: 60%;
+        width: 65%;
+        border-radius: 30px;
+        // height: 100%;
+        // box-shadow: 0 0 11px 4px rgb(43 40 40 / 17%);
+        // border: 3px solid #edededf0;
+        background: white;
+        margin-bottom: 0px !important;
+    }
 
-  .menu li {
-    margin: 0px 20px 20px 20px;
-  }
-  .menu li img {
-    width: 150px;
-    height: 100%;
-    text-align: center;
-    margin: auto;
-    display: block;
-  }
-  .menu li a {
-    text-decoration: none;
-    color: black;
-    font-weight: 600;
-    font-size: 13px;
-    display: flex;
-    justify-content: space-between;
-  }
-  .menu li a i {
-    margin-top: 2px;
-    font-size: 18px;
-  }
+    .menu li {
+        margin: 0px 20px 20px 20px;
+    }
+    .menu li img {
+        width: 150px;
+        height: 100%;
+        text-align: center;
+        margin: auto;
+        display: block;
+    }
+    .menu li a {
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu li a i {
+        margin-top: 2px;
+        font-size: 18px;
+    }
 
-  .open-menu {
-    transform: translateX(0px);
-  }
+    .open-menu {
+        transform: translateX(0px);
+    }
 
-  // .close-icon::before {
-  //   content: '\f00d';
-  //   font-family: FontAwesome;
-  //   font-size: 23px;
-  // }
+    // .close-icon::before {
+    //   content: '\f00d';
+    //   font-family: FontAwesome;
+    //   font-size: 23px;
+    // }
 }
-
 
 /* CSS Document */
 
 .header-banner {
     // box-shadow: 0 1px 6px rgba(32,33,36,.28);
     // border-color: rgba(223,225,229,0);
-    @media screen and (max-width:992px) {
+    @media screen and (max-width: 992px) {
         position: sticky;
         top: 0;
         z-index: 10;
     }
-        nav {
-        margin:0;
+    nav {
+        margin: 0;
         padding: 0;
         background-color: #fff;
         .container {
@@ -151,32 +150,33 @@
                         width: 150px;
                     }
                 }
-                .logo-imgg{
-                    border: none!important;
+                .logo-imgg {
+                    border: none !important;
                 }
                 .navlinks-section {
                     .menu {
                         background: #fff;
                         float: right;
-                        padding:0;
-                        margin:0;
+                        padding: 0;
+                        margin: 0;
                         list-style: none;
                         position: relative;
+                        height: 100vh;
                         li {
                             // margin: 0px;
                             display: inline-block;
                             float: left;
                             background-color: #fff;
-                            // border-radius: 30px;
-                            margin: 0px 30px 15px -23px;
+                            margin: 0px 30px 20px -10px;
                             border: 3px solid #edededf0;
                             border-radius: 15px;
+                            padding: 5px 0px;
                             a {
-                                display:block;
-                                padding: 5px 15px;	
+                                display: block;
+                                padding: 3px 15px;
                                 color: #000;
-                                font-size:16px;
-                                text-decoration:none;
+                                font-size: 16px;
+                                text-decoration: none;
                                 // margin-bottom: 27px;
                                 margin-left: 30px;
                                 // display: flex;
@@ -192,62 +192,65 @@
     }
 }
 
-
 .toggle,
-[id^=drop] {
-	display: none;
+[id^="drop"] {
+    display: none;
 }
 nav:after {
-	content:"";
-	display:table;
-	clear:both;
+    content: "";
+    display: table;
+    clear: both;
 }
 
-
-nav ul li ul li:hover { background: #000000; }
+nav ul li ul li:hover {
+    background: #000000;
+}
 
 /* Background color change on Hover */
-nav a:hover { 
-	background-color: #000000; 
+nav a:hover {
+    background-color: #000000;
 }
 nav ul ul {
-	display: none;
-	position: absolute; 
+    display: none;
+    position: absolute;
 }
 
 nav ul li:hover > ul {
-	display:inherit;
-}
-	
-/* Fisrt Tier Dropdown */
-nav ul ul li {
-	width:170px;
-	float:none;
-	display:list-item;
-	position: relative;
-}
-nav ul ul ul li {
-	position: relative;
-	top:-60px;
-	/* has to be the same number as the "width" of "nav ul ul li" */ 
-	left:170px; 
+    display: inherit;
 }
 
-	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+    width: 170px;
+    float: none;
+    display: list-item;
+    position: relative;
+}
+nav ul ul ul li {
+    position: relative;
+    top: -60px;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+    left: 170px;
+}
+
 /* Change ' +' in order to change the Dropdown symbol */
-li > a:after { content:  ' +'; }
-li > a:only-child:after { content: ''; }
+li > a:after {
+    content: " +";
+}
+li > a:only-child:after {
+    content: "";
+}
 
 .menu-icon {
     display: none;
-    @media (max-width:992px) {
+    @media (max-width: 992px) {
         display: block;
         position: absolute;
         left: 25px;
         top: -5px;
     }
 }
-@media (max-width:992px) {
+@media (max-width: 992px) {
     .navlinks-section {
         position: relative;
         .menu-icon {
@@ -301,33 +304,30 @@ li > a:only-child:after { content: ''; }
         }
     }
     .close-icon {
-        &::before{
+        &::before {
             content: "\f00d";
             font-family: FontAwesome;
             font-size: 25px;
         }
     }
-
 }
 
-@media (max-width:468px){
-    .icon-img{
-        width: 30px!important;
-        margin: 0px!important;
+@media (max-width: 468px) {
+    .icon-img {
+        width: 35px !important;
+        margin: 0px !important;
         float: right;
     }
-   .tittle {
-    //     margin-bottom: 0px!important;
-    // margin-top: 6px;
-    margin: 5px 0px 7px 0px!important;
-    float: left;
-}
-.icons-imgs{
-    width: 35px!important;
-    margin: 0px!important;
-    float: right;
-    margin-top: 7px!important;
-}
-
-    
+    .tittle {
+        //     margin-bottom: 0px!important;
+        // margin-top: 6px;
+        margin: 5px 0px 7px 0px !important;
+        float: left;
+    }
+    .icons-imgs {
+        width: 35px !important;
+        margin: 0px !important;
+        float: right;
+        margin-top: 7px !important;
+    }
 }

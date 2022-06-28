@@ -48,6 +48,12 @@ export class VElectrixService {
     return this.httpClient.get(environment.baseUrl + "stores/storeList");
   }
 
+  // home Banner List
+
+  public getHomeBannerList(): Observable<any> {
+    return this.httpClient.get(environment.baseUrl + "image/getImageList");
+  }
+
   
 }
 

@@ -1,8 +1,8 @@
 <div class="Homepage-section">
   <div class="container">
     <div class="row">
-      <div class="viewpage animated fadeInDown">
-        <img src="../../../assets/images/Home-Img/P1-11.png" />
+      <div class="viewpage animated fadeInDown" *ngFor = "let banner of getHomeImgList">
+        <!-- <img src="../../../assets/images/Home-Img/P1-11.png" />
       </div>
       <div class="viewpage animated fadeInUp">
         <img src="../../../assets/images/Home-Img/Enroute1.png" />
@@ -10,14 +10,17 @@
       <div class="viewpage animated fadeInDown">
         <img src="../../../assets/images/Home-Img/Energy1.png" />
       </div>
-      <div class="viewpage animated fadeInUp">
+      <div class="viewpage animated fadeInUp"> 
         <img src="../../../assets/images/Home-Img/Ease1.png" />
       </div>
       <div class="viewpage animated fadeInDown">
         <img src="../../../assets/images/Home-Img/Equipment1.png" />
       </div>
       <div class="viewpage animated fadeInDown">
-        <img src="../../../assets/images/Home-Img/Essential1.png" />
+        <img src="../../../assets/images/Home-Img/Essential1.png" /> -->
+
+        <img src="{{baseUrl}}{{banner?.image}}" />
+
       </div>
     </div>
   </div>

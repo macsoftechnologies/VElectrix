@@ -10,4 +10,9 @@ export class FooterComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  showMenu() {
+    document.querySelector('.menu')?.classList.toggle('open-menu')
+    document.querySelector('.open-icon')?.classList.toggle('close-icon')
+  }
 }

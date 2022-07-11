@@ -291,10 +291,9 @@
                       BookrideForm.get('aadharNo')?.touched) ||
                     (BookrideForm.get('aadharNo')?.pristine && hasError)
                   "
-                  type="number"
+                  type="number" 
                   class="form-control"
-                  id="aadharNo"
-                  pattern="\d*"
+                  onKeyPress="if(this.value.length==12) return false;"
                   formControlName="aadharNo"
                   maxlength="12"
                 />
@@ -324,10 +323,9 @@
                       BookrideForm.get('contactNo')?.touched) ||
                     (BookrideForm.get('contactNo')?.pristine && hasError)
                   "
-                  type="number"
+                  type="number" 
                   class="form-control"
-                  id="contactNo"
-                  pattern="\d*"
+                  onKeyPress="if(this.value.length==10)  return false;"
                   formControlName="contactNo"
                   maxlength="10"
                 />

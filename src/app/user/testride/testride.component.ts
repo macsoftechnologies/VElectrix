@@ -52,7 +52,7 @@ export class TestrideComponent implements OnInit {
       bookrideUpdate.append('contactNo', this.BookrideForm.value.contactNo)
       bookrideUpdate.append('address', this.BookrideForm.value.address)
       bookrideUpdate.append('area', this.BookrideForm.value.area)
-      bookrideUpdate.append('landMark', this.BookrideForm.value.landMark)
+      bookrideUpdate.append('landmark', this.BookrideForm.value.landMark)
       console.log("ndjdj", this.BookrideForm.value.landMark)
       bookrideUpdate.append('city', this.BookrideForm.value.city)
       // bookrideUpdate.append('model', this.BookrideForm.value.vehicleModel)
@@ -80,12 +80,12 @@ export class TestrideComponent implements OnInit {
 
       this.velectrixservices.bookride(bookrideUpdate).subscribe((loginResp) => {
         if (loginResp.statusCode == 200) {
-          Swal.fire({
-            icon: 'success',
-            text: 'Test ride is initiated ',
-            showConfirmButton: false,
-            timer: 3000,
-          })
+          // Swal.fire({
+          //   icon: 'success',
+          //   text: 'Test ride is initiated ',
+          //   showConfirmButton: false,
+          //   timer: 3000,
+          // })
           console.log('data sent')
           this.router.navigateByUrl('user/confirm Testride')
         } else {

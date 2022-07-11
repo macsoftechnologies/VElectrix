@@ -3,7 +3,7 @@
     .viewpage {
       text-align: center;
       // margin: 10px 40px 20px 40px;
-      margin: 10px 15px;
+      // margin: 10px 15px;
       // height: 225px;
       width: 100%;
       background-color: #fff;
@@ -17,4 +17,37 @@
       }
     }
   }
+}
+
+
+input {
+  /*    //insert the search icon*/
+  background-image: url("../../../assets/images/Icons/icon.png");
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  background-position: 10px 10px;
+  height: 50px;
+  width: 290px;
+  // position: absolute;
+  right: 20px;
+  // top: 30px;
+  font-size: 16px;
+  padding: 5px 10px 5px 50px;
+  border-radius: 10px;
+  // border-color: #E1E2E3;
+  border: 2px solid #E1E2E3;
+  margin: auto;
+  margin-bottom: 15px;
+  color: #E1E2E3;
+  display: flex;
+}
+
+input::placeholder {
+  color: #E1E2E3;
+  // font-weight: bold;
+  text-align: center;
+  letter-spacing: 3px;
+  font-size: 20px;
+
+
 }

@@ -20,14 +20,14 @@
         data-ride="carousel"
       >
         <ul class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" class="colo"  *ngFor="let vehicleColors of getVehicleColors;let i = index;">
-            <!-- data-slide-to="i" -->
-            <!--  -->
+          <!-- <li data-target="#carouselExampleIndicators" class="colo"  *ngFor="let vehicleColors of getVehicleColors;let i = index;">
+            data-slide-to="i"
+            
             <img src="{{baseUrl}}{{vehicleColors?.colorImage}}" height="20" width="20">
-            <!-- (click)="colorI(vehicleColors?.vehicleId)"  -->
-          </li>
-          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> -->
-          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+            (click)="colorI(vehicleColors?.vehicleId)" 
+          </li> -->
+          <!-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li> 
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
         </ul>
         <div class="carousel-inner viewpage">
           <!-- *ngIf="currentID == 0" -->
@@ -187,7 +187,7 @@
     <div class="locatebtn">
       <a>
         <button type="button" class="btn btn-link" (click)="testRide()">
-          BOOK A TEST RIDE
+          BOOK TEST RIDE
         </button>
       </a>
       <a [routerLink]="['/user/Location']">

@@ -10,7 +10,7 @@
           <div class="item active">
             <div class="viewpage">
               <a *ngFor="let image of data?.vehicleImage">
-                <h6>{{data?.model}}</h6>
+                <!-- <h6>{{data?.model}}</h6> -->
                 <img src="{{baseUrl}}{{image}}" (click)="GotoVehicleDetails(data)" />
               </a>
             </div>

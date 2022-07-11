@@ -244,14 +244,14 @@
           </div>
         </form> -->
         <div class="testreq">
-          <h6>Requirements for Test Ride</h6>
+          <h6>BOOK A TEST RIDE</h6>
           <form [formGroup]="BookrideForm">
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
                 NAME
-                <sup>
+                <!-- <sup>
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
-                </sup>
+                </sup> -->
               </label>
               <div class="col-sm-8 col-xs-8">
                 <input
@@ -264,6 +264,7 @@
                   class="form-control"
                   id="name"
                   formControlName="name"
+                  onkeydown="return /[a-z]/i.test(event.key)"
                 />
                 <span
                   class="error"
@@ -280,9 +281,9 @@
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
                 AADHAR N0:
-                <sup>
+                <!-- <sup>
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
-                </sup>
+                </sup> -->
               </label>
               <div class="col-sm-8 col-xs-8">
                 <input
@@ -293,9 +294,10 @@
                   "
                   type="number" 
                   class="form-control"
-                  onKeyPress="if(this.value.length==12) return false;"
+                  onKeyPress="if(this.value.length == 12) return false;"
                   formControlName="aadharNo"
                   maxlength="12"
+                  minlength="12"
                 />
                 <span
                   class="error"
@@ -312,9 +314,9 @@
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
                 CONTACT N0:
-                <sup>
+                <!-- <sup>
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
-                </sup>
+                </sup> -->
               </label>
               <div class="col-sm-8 col-xs-8">
                 <input
@@ -325,7 +327,7 @@
                   "
                   type="number" 
                   class="form-control"
-                  onKeyPress="if(this.value.length==10)  return false;"
+                  onKeyPress="if(this.value.length==10) return false;"
                   formControlName="contactNo"
                   maxlength="10"
                 />
@@ -344,9 +346,9 @@
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
                 ADDRESS1
-                <sup>
+                <!-- <sup>
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
-                </sup>
+                </sup> -->
               </label>
               <div class="col-sm-8 col-xs-8">
                 <input
@@ -359,7 +361,9 @@
                   class="form-control"
                   id="address"
                   formControlName="address"
+                  
                 />
+                <!-- onkeydown="return /[a-z]/i.test(event.key)" -->
                 <span
                   class="error"
                   *ngIf="
@@ -375,9 +379,9 @@
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
                 ADDRESS2
-                <sup>
+                <!-- <sup>
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
-                </sup>
+                </sup> -->
               </label>
               <div class="col-sm-8 col-xs-8">
                 <input
@@ -390,7 +394,9 @@
                   class="form-control"
                   id="area"
                   formControlName="area"
+                  
                 />
+                <!-- onkeydown="return /[a-z]/i.test(event.key)" -->
                 <span
                   class="error"
                   *ngIf="
@@ -406,9 +412,9 @@
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
                 LANDMARK
-                <sup>
+                <!-- <sup>
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
-                </sup>
+                </sup> -->
               </label>
               <div class="col-sm-8 col-xs-8">
                 <input
@@ -421,6 +427,7 @@
                   class="form-control"
                   id="landMark"
                   formControlName="landMark"
+                  onkeydown="return /[a-z]/i.test(event.key)"
                 />
                 <span
                   class="error"
@@ -437,9 +444,9 @@
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
                 CITY
-                <sup>
+                <!-- <sup>
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
-                </sup>
+                </sup> -->
               </label>
               <div class="col-sm-8 col-xs-8">
                 <input
@@ -452,6 +459,7 @@
                   class="form-control"
                   id="city"
                   formControlName="city"
+                  onkeydown="return /[a-z]/i.test(event.key)"
                 />
                 <span
                   class="error"

@@ -32,7 +32,7 @@ export class LocationComponent implements OnInit {
     if (mapElement) {
       const map = new google.maps.Map(mapElement, {
         center: this.myLatlng,
-        zoom: 9
+        zoom: 10
       });
 
       const markers = this.locationPoints
@@ -41,7 +41,7 @@ export class LocationComponent implements OnInit {
         new google.maps.Marker({
           position: new google.maps.LatLng(marker.latitude, marker.longitude),
           map,
-          icon: "../assets/images/pointer.png"
+          icon: "../assets/images/marker.png"
         })
       })
       // this.marker = new google.maps.Marker({

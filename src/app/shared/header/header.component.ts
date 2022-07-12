@@ -18,4 +18,15 @@ export class HeaderComponent implements OnInit {
     document.querySelector('.menu')?.classList.toggle('open-menu')
     document.querySelector('.open-icon')?.classList.toggle('close-icon')
   }
+
+  onGreen() {
+    localStorage.setItem("Green", String(true))
+  }
+
+  onGrey() {
+    localStorage.removeItem("Green")
+    console.log("Remove")
+  }
+
+
 }

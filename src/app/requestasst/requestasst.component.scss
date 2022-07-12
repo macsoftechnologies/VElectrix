@@ -1,5 +1,6 @@
 @media only screen and (max-width: 480px) {
   .testridesection {
+    margin-top: 25px;
     .card {
       margin-bottom: 60px;
       .card-body {
@@ -41,5 +42,41 @@
         }
       }
     }
+  }
+}
+
+.form-group {
+  margin-bottom: 5px;
+  label {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  input {
+    font-size: 14px;
+  }
+  sup {
+    i {
+      color: #eb0909;
+      font-size: 8px;
+    }
+  }
+  span {
+    font-size: 12px;
+    text-transform: none;
+    color: #df4957;
+  }
+  .form-control {
+    background-image: none;
+  }
+  button.btn {
+    text-align: center;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-radius: 50px;
+    width: 130px;
+    height: 40px;
+    background-color: #28b8e8;
+    background-image: linear-gradient(to right, #2cbae7, #0f347d);
   }
 }

@@ -12,7 +12,7 @@ import { ChargingstationComponent } from './chargingstation/chargingstation.comp
 import { ServicestationComponent } from './servicestation/servicestation.component'
 import { RequestasstComponent } from './requestasst/requestasst.component'
 import { MatIconModule } from '@angular/material/icon'
-import { FormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http'
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -35,7 +35,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     MatIconModule,
     FormsModule,
     HttpClientModule,
-    CarouselModule, 
+    CarouselModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent],

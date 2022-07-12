@@ -253,7 +253,7 @@
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
                 </sup> -->
               </label>
-              <div class="col-sm-8 col-xs-8">
+              <div class="col-sm-8 col-xs-8 margin">
                 <input
                   [class.is-invalid]="
                     (BookrideForm.get('name')?.invalid &&
@@ -266,17 +266,18 @@
                   formControlName="name"
                   onkeydown="return /[a-z]/i.test(event.key)"
                 />
-                <span
-                  class="error"
-                  *ngIf="
-                    (BookrideForm.get('name')?.invalid &&
-                      BookrideForm.get('name')?.touched) ||
-                    (BookrideForm.get('name')?.pristine && hasError)
-                  "
-                >
-                  Please enter your Name
-                </span>
+               
               </div>
+              <span
+              class="error"
+              *ngIf="
+                (BookrideForm.get('name')?.invalid &&
+                  BookrideForm.get('name')?.touched) ||
+                (BookrideForm.get('name')?.pristine && hasError)
+              "
+            >
+              Please enter your Name
+            </span>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
@@ -285,7 +286,7 @@
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
                 </sup> -->
               </label>
-              <div class="col-sm-8 col-xs-8">
+              <div class="col-sm-8 col-xs-8 margin">
                 <input
                   [class.is-invalid]="
                     (BookrideForm.get('aadharNo')?.invalid &&
@@ -299,17 +300,18 @@
                   maxlength="12"
                   minlength="12"
                 />
-                <span
-                  class="error"
-                  *ngIf="
-                    (BookrideForm.get('aadharNo')?.invalid &&
-                      BookrideForm.get('aadharNo')?.touched) ||
-                    (BookrideForm.get('aadharNo')?.pristine && hasError)
-                  "
-                >
-                  Please enter your valid Aadhar No
-                </span>
+              
               </div>
+              <span
+              class="error"
+              *ngIf="
+                (BookrideForm.get('aadharNo')?.invalid &&
+                  BookrideForm.get('aadharNo')?.touched) ||
+                (BookrideForm.get('aadharNo')?.pristine && hasError)
+              "
+            >
+              Please enter your valid Aadhar No
+            </span>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
@@ -318,7 +320,7 @@
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
                 </sup> -->
               </label>
-              <div class="col-sm-8 col-xs-8">
+              <div class="col-sm-8 col-xs-8 margin">
                 <input
                   [class.is-invalid]="
                     (BookrideForm.get('contactNo')?.invalid &&
@@ -331,17 +333,18 @@
                   formControlName="contactNo"
                   maxlength="10"
                 />
-                <span
-                  class="error"
-                  *ngIf="
-                    (BookrideForm.get('contactNo')?.invalid &&
-                      BookrideForm.get('contactNo')?.touched) ||
-                    (BookrideForm.get('contactNo')?.pristine && hasError)
-                  "
-                >
-                  Please enter your Contact No.
-                </span>
+               
               </div>
+              <span
+              class="error"
+              *ngIf="
+                (BookrideForm.get('contactNo')?.invalid &&
+                  BookrideForm.get('contactNo')?.touched) ||
+                (BookrideForm.get('contactNo')?.pristine && hasError)
+              "
+            >
+              Please enter your Contact No.
+            </span>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
@@ -350,7 +353,7 @@
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
                 </sup> -->
               </label>
-              <div class="col-sm-8 col-xs-8">
+              <div class="col-sm-8 col-xs-8 margin">
                 <input
                   [class.is-invalid]="
                     (BookrideForm.get('address')?.invalid &&
@@ -364,17 +367,18 @@
                   
                 />
                 <!-- onkeydown="return /[a-z]/i.test(event.key)" -->
-                <span
-                  class="error"
-                  *ngIf="
-                    (BookrideForm.get('address')?.invalid &&
-                      BookrideForm.get('address')?.touched) ||
-                    (BookrideForm.get('address')?.pristine && hasError)
-                  "
-                >
-                  Please enter your Address1
-                </span>
+               
               </div>
+              <span
+              class="error"
+              *ngIf="
+                (BookrideForm.get('address')?.invalid &&
+                  BookrideForm.get('address')?.touched) ||
+                (BookrideForm.get('address')?.pristine && hasError)
+              "
+            >
+              Please enter your Address1
+            </span>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
@@ -383,7 +387,7 @@
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
                 </sup> -->
               </label>
-              <div class="col-sm-8 col-xs-8">
+              <div class="col-sm-8 col-xs-8 margin">
                 <input
                   [class.is-invalid]="
                     (BookrideForm.get('area')?.invalid &&
@@ -397,17 +401,18 @@
                   
                 />
                 <!-- onkeydown="return /[a-z]/i.test(event.key)" -->
-                <span
-                  class="error"
-                  *ngIf="
-                    (BookrideForm.get('area')?.invalid &&
-                      BookrideForm.get('area')?.touched) ||
-                    (BookrideForm.get('area')?.pristine && hasError)
-                  "
-                >
-                  Please enter your Address2
-                </span>
+               
               </div>
+              <span
+              class="error"
+              *ngIf="
+                (BookrideForm.get('area')?.invalid &&
+                  BookrideForm.get('area')?.touched) ||
+                (BookrideForm.get('area')?.pristine && hasError)
+              "
+            >
+              Please enter your Address2
+            </span>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
@@ -416,7 +421,7 @@
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
                 </sup> -->
               </label>
-              <div class="col-sm-8 col-xs-8">
+              <div class="col-sm-8 col-xs-8 margin">
                 <input
                   [class.is-invalid]="
                     (BookrideForm.get('landMark')?.invalid &&
@@ -430,7 +435,9 @@
                   
                 />
                 <!-- onkeydown="return /[a-z]/i.test(event.key)" -->
-                <span
+                
+              </div>
+              <span
                   class="error"
                   *ngIf="
                     (BookrideForm.get('landMark')?.invalid &&
@@ -440,7 +447,6 @@
                 >
                   Please enter your LandMark
                 </span>
-              </div>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 col-form-label">
@@ -449,7 +455,7 @@
                   <i class="fa fa-asterisk" aria-hidden="true"></i>
                 </sup> -->
               </label>
-              <div class="col-sm-8 col-xs-8">
+              <div class="col-sm-8 col-xs-8 margin">
                 <input
                   [class.is-invalid]="
                     (BookrideForm.get('city')?.invalid &&
@@ -462,17 +468,18 @@
                   formControlName="city"
                   onkeydown="return /[a-z]/i.test(event.key)"
                 />
-                <span
-                  class="error"
-                  *ngIf="
-                    (BookrideForm.get('city')?.invalid &&
-                      BookrideForm.get('city')?.touched) ||
-                    (BookrideForm.get('city')?.pristine && hasError)
-                  "
-                >
-                  Please enter your City
-                </span>
+               
               </div>
+              <span
+              class="error"
+              *ngIf="
+                (BookrideForm.get('city')?.invalid &&
+                  BookrideForm.get('city')?.touched) ||
+                (BookrideForm.get('city')?.pristine && hasError)
+              "
+            >
+              Please enter your City
+            </span>
             </div>
             <div class="form-group row">
               <label class="col-sm-4 col-xs-4 text-center col-form-label"></label>

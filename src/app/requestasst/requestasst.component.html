@@ -4,7 +4,106 @@
       <div class="card-body">
         <div class="testreq">
           <h6>Requirements to get roadside assistance service</h6>
-          <table class="table">
+         
+          <form [formGroup]="RoadSideForm">
+            <div class="form-group row">
+              <label class="col-sm-6 col-xs-6 col-6 col-form-label">
+                Name
+              </label>
+              <div class="col-sm-6 col-xs-6 col-6">
+                <input
+                  [class.is-invalid]="
+                    (RoadSideForm.get('name')?.invalid &&
+                      RoadSideForm.get('name')?.touched) ||
+                    (RoadSideForm.get('name')?.pristine && hasError)
+                  "
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  formControlName="name"
+                  onkeydown="return /[a-z]/i.test(event.key)"
+                />
+                <span
+                  class="error"
+                  *ngIf="
+                    (RoadSideForm.get('name')?.invalid &&
+                      RoadSideForm.get('name')?.touched) ||
+                    (RoadSideForm.get('name')?.pristine && hasError)
+                  "
+                >
+                  Please enter your Name
+                </span>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-6 col-xs-6 col-6 col-form-label">
+                Contact No:
+                <!-- <sup>
+                  <i class="fa fa-asterisk" aria-hidden="true"></i>
+                </sup> -->
+              </label>
+              <div class="col-sm-6 col-xs-6 col-6">
+                <input
+                  [class.is-invalid]="
+                    (RoadSideForm.get('Contact')?.invalid &&
+                      RoadSideForm.get('Contact')?.touched) ||
+                    (RoadSideForm.get('Contact')?.pristine && hasError)
+                  "
+                  type="number" 
+                  class="form-control"
+                  onKeyPress="if(this.value.length == 10) return false;"
+                  formControlName="Contact"
+                  maxlength="10"
+                  minlength="10"
+                />
+                <span
+                  class="error"
+                  *ngIf="
+                    (RoadSideForm.get('Contact')?.invalid &&
+                      RoadSideForm.get('Contact')?.touched) ||
+                    (RoadSideForm.get('Contact')?.pristine && hasError)
+                  "
+                >
+                  Please enter your valid Contact No
+                </span>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-6 col-xs-6 col-6 col-form-label">
+                Current Location:
+                <!-- <sup>
+                  <i class="fa fa-asterisk" aria-hidden="true"></i>
+                </sup> -->
+              </label>
+              <div class="col-sm-6 col-xs-6 col-6">
+                <textarea
+                 
+                  type="number" 
+                  class="form-control"
+                  onKeyPress="if(this.value.length==10) return false;"
+                  formControlName="Location"
+                  maxlength="10"
+                ></textarea>
+               
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-4 col-xs-4 text-center col-form-label"></label>
+              <div class="col-sm-8 col-xs-8 text-center">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  (click)="roadSide()"
+                >
+                  Submit
+                </button>
+              </div>
+            </div>
+          </form>
+         
+         
+         
+          <!-- <table class="table">
             <thead></thead>
             <tbody>
               <tr>
@@ -16,30 +115,31 @@
                 <th scope="row">CONTACT NO.</th>
                 <td><input type="number" class="form-control" /></td>
               </tr>
-              <!-- <tr>
+              <tr>
                 <th scope="row">ADDRESS</th>
                 <td></td>
-              </tr> -->
+              </tr>
               <tr>
                 <th scope="row">CURRENT LOCATION</th>
                 <td>
                   <textarea type="text" class="form-control"></textarea>
-                  <!-- <input type="text" class="form-control" /> -->
+                  <input type="text" class="form-control" />
                 </td>
               </tr>
-              <!-- <tr>
+              <tr>
                 <th scope="row">LANDMARK</th>
                 <td></td>
               </tr>
               <tr>
                 <th scope="row">CITY</th>
                 <td></td>
-              </tr> -->
+              </tr>
             </tbody>
-          </table>
-          <div class="text-center">
+          </table> -->
+          <!-- <div class="text-center">
             <button type="button" class="btn btn-primary">Submit</button>
-          </div>
+          </div> -->
+
         </div>
       </div>
     </div>

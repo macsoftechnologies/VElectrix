@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { MatIconModule } from '@angular/material/icon'
+import { Router } from '@angular/router'
 import { VElectrixService } from 'src/app/Services/velectrix.service'
 
 @Component({
@@ -12,8 +13,9 @@ export class FooterComponent implements OnInit {
   color : boolean = true
   greenColor: boolean = false
   GreenColor: any
+  // router: any;
 
-  constructor(public Service: VElectrixService) {
+  constructor(public Service: VElectrixService, private router: Router) {
     // this.GreenIcon = localStorage.getItem("Green")
     // console.log(typeof(this.GreenIcon))
     // console.log(this.GreenIcon)
@@ -47,6 +49,12 @@ export class FooterComponent implements OnInit {
 
   onGrey() {
     this.GreenColor = this.Service.colorChangeGreen();    //false
+  }
+
+  gotoHome() {
+
+    this.router.navigateByUrl('/user/Home')
+    this.GreenColor = this.Service.colorChangeGreen(); 
   }
 
 }

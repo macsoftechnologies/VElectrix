@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { Router } from '@angular/router'
+import { VElectrixService } from 'src/app/Services/velectrix.service'
 declare const $: any
 
 @Component({
@@ -8,28 +9,9 @@ declare const $: any
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  document: any
-  querySelector: any
-  classList: any
-  constructor(private router: Router) {}
+  constructor() {}
 
   ngOnInit(): void {}
-
-  showMenu() {
-    document.querySelector('.menu')?.classList.toggle('open-menu')
-    document.querySelector('.open-icon')?.classList.toggle('close-icon')
-  }
-
-  onGreen() {
-    localStorage.setItem("Green", String(true))
-    this.router.navigateByUrl('user/VEnergy')
-    console.log("Green")
-  }
-
-  onGrey() {
-    localStorage.removeItem("Green")
-    console.log("Remove")
-  }
 
 
 }

@@ -1,5 +1,55 @@
+
+<section>
+  <div class="header-banner">
+    <nav>
+      <div class="container">
+        <div class="nav-section">
+          <div class="navlinks-section">
+            <!-- <label for="drop" class="toggle">Menu</label>
+                    <input type="checkbox" id="drop" /> -->
+            <!-- <div class="menu-icon" (click)="showMenu()">
+                        <i class="#"><mat-icon>notes</mat-icon></i>
+                        <img src="../../../assets/images/Icons/Menu Icon.png" width="27px"/>
+  
+                    </div> -->
+            <ul class="menu">
+              <li (click)="onGrey()" class="logo-imgg">
+                <a [routerLink]="['/user/Home']" (click)="showMenu()">
+                  <img src="assets/images/menulogo.png" />
+                </a>
+              </li>
+              <li (click)="onGrey()"><a [routerLink]="['/user/VEnroute']" (click)="showMenu()">
+                  <p class="tittle"><i>
+                      <strong>VE</strong>NROUTE</i></p>
+                  <img src="../../../assets/images/sideBar_Icons/V-Enroute.png" class="icon-img" />
+                </a></li>
+              <li (click)="onGreen()"><a [routerLink]="['/user/VEnergy']" (click)="showMenu()">
+                  <p class="tittle"><i><strong>VE</strong>NERGY</i></p>
+                  <img src="../../../assets/images/sideBar_Icons/V-Energy.png" class="icon-img" />
+                </a></li>
+              <li (click)="onGrey()"><a [routerLink]="['/user/VEase']" (click)="showMenu()">
+                  <p class="tittle"><i><strong>VE</strong>ASE</i></p>
+                  <img src="../../../assets/images/sideBar_Icons/V-Ease.png" class="icons-imgs" />
+                </a></li>
+              <li><a (click)="showMenu()">
+                  <p class="tittle"><i><strong>VE</strong>QUIPMENT</i></p>
+                  <img src="../../../assets/images/sideBar_Icons/V-Equipment.png" class="icon-img" />
+                </a></li>
+              <li><a (click)="showMenu()">
+                  <p class="tittle"><i><strong>VE</strong>SSENTIAL</i></p>
+                  <img src="../../../assets/images/sideBar_Icons/V-Essentials.png" class="icon-img" />
+                </a></li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
+
 <!-- Blue -->
-<div class="responsive-filters d-block d-md-none" *ngIf="color">
+<div class="responsive-filters d-block d-md-none">
   <div class="filter-btn">
     <button class="search-btn" (click)="showMenu()">
       <img src="../../../assets/images/Icons/Menu Icon1.png" width="27px" />
@@ -15,7 +65,7 @@
   </div>
 </div>
 
-<div class="responsive-filters d-block d-md-none" *ngIf="GreenIcon">
+<div class="responsive-filters d-block d-md-none" *ngIf="GreenColor">
   <div class="filter-btn">
     <button class="search-btn" (click)="showMenu()">
       <img src="../../../assets/images/Icons/Menu Icon2.png" width="27px" />

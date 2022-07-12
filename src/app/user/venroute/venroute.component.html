@@ -1,4 +1,8 @@
-<div class="Homepage-section">
+<div *ngIf="isLoading">
+  <h1>Loading</h1>
+</div>
+
+<div class="Homepage-section" *ngIf="!isLoading">
   <div class="container">
     <div>
       <p class="route-tittle"><strong>VE</strong>NROUTE</p>

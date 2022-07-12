@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 export class VEnrouteComponent implements OnInit {
   getBrandList: any;
   baseUrl: string = environment.baseUrl
+  isLoading = true
 
   constructor(private VElectrixServices: VElectrixService, private router: Router) { }
 
@@ -20,8 +21,11 @@ export class VEnrouteComponent implements OnInit {
 
   GetBrands() {
     this.VElectrixServices.getBrands().subscribe((brandResp) => {
-      this.getBrandList = brandResp.Data.brandsList;
-      console.log("data", this.getBrandList)
+      if (brandResp.StatusCode == 200) {
+        this.isLoading = false
+        this.getBrandList = brandResp.Data.brandsList;
+        console.log("data", this.getBrandList)
+      }
     })
   }
 
@@ -31,6 +35,6 @@ export class VEnrouteComponent implements OnInit {
     localStorage.setItem("BrandID", JSON.stringify(item.brandId));
     this.router.navigateByUrl('/user/PureVE')
   }
-  
-  
+
+
 }

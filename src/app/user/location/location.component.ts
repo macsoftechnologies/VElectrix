@@ -35,14 +35,18 @@ export class LocationComponent implements OnInit {
         zoom: 10
       });
 
-      const markers = this.locationPoints
+      const markers = this.getStoreDetailsList
       console.log("markers", markers)
       markers.map((marker: { latitude: number; longitude: number }) => {
-        new google.maps.Marker({
+        const mapMarker = new google.maps.Marker({
           position: new google.maps.LatLng(marker.latitude, marker.longitude),
           map,
           icon: "../assets/images/marker.png"
         })
+        mapMarker.addListener('click', function() {
+          alert(JSON.stringify(marker))
+        })
+        
       })
       // this.marker = new google.maps.Marker({
       //   position: this.myLatlng,

@@ -10,6 +10,17 @@ import { environment } from 'src/environments/environment'
 export class VElectrixService {
   constructor(private httpClient: HttpClient) { }
 
+  public Iscolor: any
+
+  public colorChangeGreen() {
+    this.Iscolor = false;
+    return this.Iscolor
+  }
+
+  // public colorChangeBlue() {
+  //   this.Iscolor = true;
+  //   return this.Iscolor
+  // }
 
   public bookride(data: any): Observable<any> {
     return this.httpClient.post(

@@ -11,9 +11,7 @@ export class FooterComponent implements OnInit {
   color : boolean = true
   greenColor: boolean = false
 
-  constructor() {}
-
-  ngOnInit(): void {
+  constructor() {
     this.GreenIcon = localStorage.getItem("Green")
     console.log(typeof(this.GreenIcon))
     console.log(this.GreenIcon)
@@ -28,6 +26,10 @@ export class FooterComponent implements OnInit {
       this.color = true
       this.greenColor = false
     }
+  }
+
+  ngOnInit(): void {
+    
   }
 
   showMenu() {

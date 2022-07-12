@@ -1,20 +1,5 @@
+<!-- Blue -->
 <div class="responsive-filters d-block d-md-none" *ngIf="color">
-  <div class="filter-btn">
-    <button class="search-btn" (click)="showMenu()">
-      <img src="../../../assets/images/Icons/Menu Icon.png" width="27px" />
-    </button>
-    <button [routerLink]="['/user/Home']">
-      <img src="../../../assets/images/Icons/Home Icon.png" width="23px"/>
-
-    </button>
-    <button class="person-btn">
-      <img src="../../../assets/images/Icons/Profile icon.png" width="30px"/>
-
-    </button>
-  </div>
-</div>
-
-<div class="responsive-filters d-block d-md-none" *ngIf="greenColor">
   <div class="filter-btn">
     <button class="search-btn" (click)="showMenu()">
       <img src="../../../assets/images/Icons/Menu Icon1.png" width="27px" />
@@ -25,6 +10,22 @@
     </button>
     <button class="person-btn">
       <img src="../../../assets/images/Icons/Profile icon1.png" width="30px"/>
+
+    </button>
+  </div>
+</div>
+
+<div class="responsive-filters d-block d-md-none" *ngIf="GreenIcon">
+  <div class="filter-btn">
+    <button class="search-btn" (click)="showMenu()">
+      <img src="../../../assets/images/Icons/Menu Icon2.png" width="27px" />
+    </button>
+    <button [routerLink]="['/user/Home']">
+      <img src="../../../assets/images/Icons/Home Icon2.png" width="23px"/>
+
+    </button>
+    <button class="person-btn">
+      <img src="../../../assets/images/Icons/Profile icon2.png" width="30px"/>
 
     </button>
   </div>

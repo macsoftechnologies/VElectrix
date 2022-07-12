@@ -31,7 +31,7 @@ export class ChargingstationComponent implements OnInit {
     if (mapElement) {
       const map = new google.maps.Map(mapElement, {
         center: this.myLatlng,
-        zoom: 3
+        zoom: 10
       });
 
       const markers = this.locationPoints

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core'
+import { Router } from '@angular/router'
 declare const $: any
 
 @Component({
@@ -10,7 +11,7 @@ export class HeaderComponent implements OnInit {
   document: any
   querySelector: any
   classList: any
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -21,6 +22,8 @@ export class HeaderComponent implements OnInit {
 
   onGreen() {
     localStorage.setItem("Green", String(true))
+    this.router.navigateByUrl('user/VEnergy')
+    console.log("Green")
   }
 
   onGrey() {

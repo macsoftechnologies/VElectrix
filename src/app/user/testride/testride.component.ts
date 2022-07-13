@@ -18,6 +18,7 @@ export class TestrideComponent implements OnInit {
   vehicleimage: any
   BrandName: any
 
+
   baseUrl: string = environment.baseUrl
 
   constructor(
@@ -100,5 +101,12 @@ export class TestrideComponent implements OnInit {
       console.log('error caught')
     }
   }
+
+  omit_special_char(event:any)
+{   
+   var k;  
+   k = event.charCode;  //         k = event.keyCode;  (Both can be used)
+   return((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57)); 
+}
 
 }

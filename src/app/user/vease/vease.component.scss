@@ -24,3 +24,16 @@
     font-weight: 800;
   }
 }
+.arrow-rating .arrow {
+  margin-left: 30px;
+  margin-top: 25px;
+}
+.arrow-rating {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // margin: 0px 0px 10px 0px;
+  .arrow {
+    font-size: 20px;
+  }
+}

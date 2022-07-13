@@ -24,6 +24,7 @@ export class ModelsComponent implements OnInit {
   getvehicleName: any;
   currentID: any = 0;
   getvehicleImage: any;
+  isShow = true;
 
   constructor(private vElectrixServices: VElectrixService, private router: Router) { }
 
@@ -97,5 +98,10 @@ export class ModelsComponent implements OnInit {
     console.log("current", this.currentID)
   }
 
+  toggleDisplay() {
+    this.isShow = !this.isShow;
+  }
+
+  
 
 }

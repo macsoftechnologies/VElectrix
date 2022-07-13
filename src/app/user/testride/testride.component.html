@@ -297,8 +297,9 @@
                   class="form-control"
                   onKeyPress="if(this.value.length == 12) return false;"
                   formControlName="aadharNo"
-                  maxlength="12"
-                  minlength="12"
+                  maxlength="15"
+                  pattern="[1-9]{4}[0-9]{4}[0-9]{4}"
+                  (keypress)="omit_special_char($event)"
                 />
               
               </div>
@@ -310,7 +311,7 @@
                 (BookrideForm.get('aadharNo')?.pristine && hasError)
               "
             >
-              Please enter your valid Aadhar No
+              Please enter your 12 digit Aadhar No
             </span>
             </div>
             <div class="form-group row">
@@ -330,8 +331,10 @@
                   type="number" 
                   class="form-control"
                   onKeyPress="if(this.value.length==10) return false;"
+                  pattern="[1-9]{1}[0-9]{9}"
                   formControlName="contactNo"
                   maxlength="10"
+                  (keypress)="omit_special_char($event)"
                 />
                
               </div>
@@ -343,7 +346,7 @@
                 (BookrideForm.get('contactNo')?.pristine && hasError)
               "
             >
-              Please enter your Contact No.
+              Please enter your 10 digit Contact No.
             </span>
             </div>
             <div class="form-group row">

@@ -15,7 +15,7 @@ export class LocationComponent implements OnInit {
   getPoints = [];
   markerslengths: any;
   locationPoints: any = [];
-  getStoreDetailsList: any;
+  StoreDetailsList: any;
   storeLocationPoints: any;
   storeIcon: any;
   storeiconn: any;
@@ -35,7 +35,7 @@ export class LocationComponent implements OnInit {
         zoom: 10
       });
 
-      const markers = this.getStoreDetailsList
+      const markers = this.StoreDetailsList
       console.log("markers", markers)
       markers.map((marker: { latitude: number; longitude: number }) => {
         const mapMarker = new google.maps.Marker({
@@ -44,7 +44,7 @@ export class LocationComponent implements OnInit {
           icon: "../assets/images/marker.png"
         })
         mapMarker.addListener('click', function() {
-          alert(JSON.stringify(marker))
+          // alert(JSON.stringify(marker))
         })
         
       })
@@ -75,13 +75,13 @@ export class LocationComponent implements OnInit {
   getStoreList() {
     this.vElectrixSerivces.getStoreList().subscribe((storeResp) => {
       if (storeResp.StatusCode == 200) {
-        this.getStoreDetailsList = storeResp?.Data?.storesList
+        this.StoreDetailsList = storeResp?.Data?.storesList
 
-        console.log("Array", this.getStoreDetailsList)
+        // console.log("Array", this.getStoreDetailsList)
 
-        this.getStoreDetailsList.forEach((item: any) => {
-          this.locationPoints.push({ longitude: item.longitude, latitude: item.latitude })
-        });
+        // this.getStoreDetailsList.forEach((item: any) => {
+        //   this.locationPoints.push({ longitude: item.longitude, latitude: item.latitude })
+        // });
 
         // this.getStoreDetailsList.forEach((item: any) => {
         //   this.locationPoints.push(item.storeIcon)

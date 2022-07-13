@@ -86,13 +86,14 @@
       // border: 3px solid #edededf0;
       background: white;
       margin-bottom: 0px !important;
+      padding-top: 15px;
   }
 
   .menu li {
       margin: 0px 20px 20px 20px;
   }
   .menu li img {
-      width: 150px;
+      width: 180px;
       height: 100%;
       text-align: center;
       margin: auto;
@@ -162,6 +163,7 @@
                       list-style: none;
                       position: relative;
                       height: 100vh;
+                      padding-top: 15px;
                       li {
                           // margin: 0px;
                           display: inline-block;
@@ -403,4 +405,8 @@ li > a:only-child:after {
   -moz-border-radius-bottomright: 25px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
+}
+
+.site_logo img {
+  height: 70px !important;
 }

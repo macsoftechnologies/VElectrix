@@ -2,10 +2,7 @@
   <div class="container">
     <div class="vehiclegetDetail_section">
       <div class="arrow-rating">
-        <span
-          class="material-symbols-outlined arrow"
-          [routerLink]="['/user/PureVE']"
-        >
+        <span class="material-symbols-outlined arrow" [routerLink]="['/user/PureVE']">
           arrow_circle_left
         </span>
 
@@ -17,11 +14,7 @@
         </div> -->
       </div>
 
-      <div
-        id="carouselExampleIndicators"
-        class="carousel slide"
-        data-ride="carousel"
-      >
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ul class="carousel-indicators">
           <li data-target="#demo" data-slide-to="0" class="active"></li>
           <li data-target="#demo" data-slide-to="1"></li>
@@ -29,33 +22,10 @@
         </ul>
         <div class="carousel-inner viewpage">
           <!-- *ngIf="currentID == 0" -->
-          <div
-            class="carousel-item"
-            *ngFor="let vehicleColors of getVehicleColors; let i = index"
-            [ngClass]="{ active: i == 0 }"
-          >
+          <div class="carousel-item" *ngFor="let vehicleColors of getVehicleColors; let i = index"
+            [ngClass]="{ active: i == 0 }">
             <!-- [ngClass]="{ active: i == 0 }" -->
-            <img
-              class=""
-              src="{{ baseUrl }}{{ vehicleColors?.vehicleImage }}"
-              alt="First slide"
-            />
-          </div>
-        </div>
-
-        <div class="carousel-inner viewpage">
-          <!-- *ngIf="currentID < 0" -->
-          <div
-            class="carousel-item"
-            *ngFor="let vehicleColors of getVehicleColors; let i = index"
-          >
-            <!-- [ngClass]="{ active:  i == 0 }" -->
-            <img
-              class=""
-              src="{{ baseUrl }}{{ vehicleColors?.vehicleImage }}"
-              alt="First slide"
-            />
-            <!-- *ngIf="vehicleColors?.vehicleId === currentID" -->
+            <img class="" src="{{ baseUrl }}{{ vehicleColors?.vehicleImage }}" alt="First slide" />
           </div>
         </div>
 
@@ -67,21 +37,11 @@
             </li>
           </ul>
         </div> -->
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="prev"
-        >
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
           <i class="fa fa-left-arrow"></i>
           <span class="sr-only">Previous</span>
         </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleIndicators"
-          role="button"
-          data-slide="next"
-        >
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
@@ -109,327 +69,348 @@
         </div>
       </div> -->
     </div>
+  </div>
 
-    <div class="vehicle_name">
-      <div class="get_model_rating">
-        <div>
-          <h5>{{ getModel }}</h5>
-          <p>{{ getvehicleName }}</p>
-        </div>
-        <!-- <div class="ratetag">
-          <div class="amount">
-            <strong>₹ {{ getPrice }}</strong>
+  <div class="vehName_colors">
+    <div class="vehName_BrandDetails">
+      <div class="vehicle_name vehicle_model_name">
+        <div class="get_model_rating">
+          <div>
+            <h5>{{ getModel }}</h5>
+            <p>{{ getvehicleName }}</p>
           </div>
-        </div> -->
+        </div>
+      </div>
+
+      <div class="vehicle_name">
+        <div class="get_model_rating">
+          <div class="ratetag">
+            <div class="amount">
+              <strong class="strong">₹ {{ getPrice }}</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="vehicle_name" data-toggle="modal" data-target="#exampleModal">
+        <div class="get_model_rating">
+          <div class="ratetag">
+            <div class="amount">
+              <strong class="strong">Data Sheet</strong>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="veh_colors">
+      <div id="accordion">
+        <div class="card">
+          <div class="card-header" id="headingOne">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                aria-controls="collapseOne">
+                <img src="assets/images/color_picker.png">
+              </button>
+            </h5>
+          </div>
+
+          <div class="veh_color_names">
+            <div id="collapseOne" class="collapse hide" aria-labelledby="headingOne" data-parent="#accordion" *ngFor="let vehicleColors of getVehicleColors; let i = index">
+              <div class="card-body">
+                <img src="{{baseUrl}}{{vehicleColors?.colorImage}}">
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="vehicle_name">
-    <div class="get_model_rating">
-      <div class="ratetag">
-        <div class="amount">
-          <strong class="strong">₹ {{ getPrice }}</strong>
+  <div>
+    <div class="container">
+      <!-- <div class="specs-carousel-sec">
+        <owl-carousel-o
+          [options]="customOptions"
+          *ngFor="let vhspecs of getVehicleSpecs"
+        >
+          <ng-template carouselSlide>
+            <div class="specs-box">
+              <p>Battery</p>
+              <p>
+                <b>{{ vhspecs?.battery }}</b>
+              </p>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="specs-box">
+              <p>Display</p>
+              <p>
+                <b>{{ vhspecs?.display }}</b>
+              </p>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="specs-box">
+              <p>Head Lamp</p>
+              <p>
+                <b>{{ vhspecs?.headLamp }}</b>
+              </p>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+          <div class="specs-box">
+            <p>Charge Output</p>
+          <p><b>{{vhspecs?.chargerOutput}}</b></p>
+          </div>
+        </ng-template>  
+          <ng-template carouselSlide>
+            <div class="specs-box">
+              <p>BatteryCasing</p>
+              <p>
+                <b>{{ vhspecs?.batteryCasing }}</b>
+              </p>
+            </div>
+          </ng-template>
+          <ng-template carouselSlide>
+            <div class="specs-box">
+              <p>Gradeablity</p>
+              <p>
+                <b>{{ vhspecs?.gradeablity }}</b>
+              </p>
+            </div>
+          </ng-template>
+        </owl-carousel-o>
+      </div> -->
+
+      <div class="locatebtn">
+        <a>
+          <button type="button" class="btn btn-link" (click)="testRide()">
+            BOOK TEST RIDE
+          </button>
+        </a>
+        <a [routerLink]="['/user/Location']">
+          <button type="button" class="btn btn-link">LOCATE STORE</button>
+        </a>
+      </div>
+
+      <div class="vehicle_specifiations">
+        <div class="specs">
+          <h4>Vehicle Specifications:</h4>
+          <form *ngFor="let vecSpecs of getVehicleSpecs">
+            <div class="form-group row">
+
+              <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Vehicle Model</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.model}}</p>
+              </div>
+            </div>
+
+            <div class="form-group row">
+
+              <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Battery</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.battery}}</p>
+              </div>
+            </div>
+
+            <div class="form-group row">
+
+              <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Battery Casing</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.batteryCasing}}</p>
+              </div>
+            </div>
+
+            <div class="form-group row">
+
+              <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Blinkers</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.blinkers}}</p>
+              </div>
+            </div>
+
+            <div class="form-group row">
+
+              <label for="staticEmail" class="col-xs-5  col-6 col-form-label">BMS</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.bms}}</p>
+              </div>
+            </div>
+
+            <div [hidden]="isShow" class="animated zoomIn">
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Brake</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.brake}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Brake Lights</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.brakeLights}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Cells</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.cells}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Charging Point</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.chargerOutput}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Controller</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.controller}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Display</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.display}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Gradeablity</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.gradeablity}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Head Lamp</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.headLamp}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Ladies Footrest:</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.ladiesFootrest}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Motor</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.motor}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Mud Guards</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.mudGuards}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Regenarative Breaking</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.regenerativeBraking}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Seat</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.seat}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Security</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.security}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Storage</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.storage}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Throttle</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.throttle}}</p>
+                </div>
+              </div>
+
+              <div class="form-group row">
+
+                <label for="staticEmail" class="col-xs-5  col-6 col-form-label">Tyre</label>
+                <!-- <label class="col-xs-1 col-form-label">:</label> -->
+                <div class="col-xs-6 col-6">
+                  <p>{{vecSpecs?.tyre}}</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="form-group row">
+              <label for="staticEmail" class="col-6 col-form-label"></label>
+              <div class="col-xs-6 col-6">
+                <button type="button" class="btns btn-primary" (click)="toggleDisplay()">Show More</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="vehicle_name" data-toggle="modal" data-target="#exampleModal">
-    <div class="get_model_rating">
-      <div class="ratetag">
-        <div class="amount">
-          <strong class="strong">Data Sheet</strong>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <!-- <div class="specs-carousel-sec">
-      <owl-carousel-o
-        [options]="customOptions"
-        *ngFor="let vhspecs of getVehicleSpecs"
-      >
-        <ng-template carouselSlide>
-          <div class="specs-box">
-            <p>Battery</p>
-            <p>
-              <b>{{ vhspecs?.battery }}</b>
-            </p>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="specs-box">
-            <p>Display</p>
-            <p>
-              <b>{{ vhspecs?.display }}</b>
-            </p>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="specs-box">
-            <p>Head Lamp</p>
-            <p>
-              <b>{{ vhspecs?.headLamp }}</b>
-            </p>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-        <div class="specs-box">
-          <p>Charge Output</p>
-        <p><b>{{vhspecs?.chargerOutput}}</b></p>
-        </div>
-      </ng-template>  
-        <ng-template carouselSlide>
-          <div class="specs-box">
-            <p>BatteryCasing</p>
-            <p>
-              <b>{{ vhspecs?.batteryCasing }}</b>
-            </p>
-          </div>
-        </ng-template>
-        <ng-template carouselSlide>
-          <div class="specs-box">
-            <p>Gradeablity</p>
-            <p>
-              <b>{{ vhspecs?.gradeablity }}</b>
-            </p>
-          </div>
-        </ng-template>
-      </owl-carousel-o>
-    </div> -->
-
-    <div class="locatebtn">
-      <a>
-        <button type="button" class="btn btn-link" (click)="testRide()">
-          BOOK TEST RIDE
-        </button>
-      </a>
-      <a [routerLink]="['/user/Location']">
-        <button type="button" class="btn btn-link">LOCATE STORE</button>
-      </a>
-    </div>
-
-    <div class="vehicle_specifiations">
-      <div class="specs">
-        <h4>Vehicle Specifications:</h4>
-        <form *ngFor="let vecSpecs of getVehicleSpecs">
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Vehicle Model</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.model}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Battery</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.battery}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Battery Casing</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.batteryCasing}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Blinkers</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.blinkers}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">BMS</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.bms}}</p>
-            </div>
-          </div>
- 
-           <div [hidden] = "isShow" class="animated zoomIn">
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Brake</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.brake}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Brake Lights</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.brakeLights}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Cells</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.cells}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Charging Point</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.chargerOutput}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Controller</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.controller}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Display</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.display}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Gradeablity</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.gradeablity}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Head Lamp</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.headLamp}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Ladies Footrest:</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.ladiesFootrest}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Motor</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.motor}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Mud Guards</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.mudGuards}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Regenarative Breaking</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.regenerativeBraking}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Seat</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.seat}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Security</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.security}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Storage</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.storage}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Throttle</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.throttle}}</p>
-            </div>
-          </div>
-
-          <div class="form-group row">
-            <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Tyre</label>
-            <!-- <label class="col-xs-1 col-form-label">:</label> -->
-            <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.tyre}}</p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="form-group row">
-          
-          <label for="staticEmail" class="col-6 col-form-label"></label>
-          <div class="col-xs-6 col-6">
-            <button type="button" class ="btns btn-primary" (click)="toggleDisplay()">Show More</button>
-
-          </div>
-        </div>
-
-          
-        </form>
-      </div>
-    </div>
-  </div>
 </div>
 
 <!-- Modal -->

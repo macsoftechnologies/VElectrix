@@ -1,17 +1,9 @@
-
-<section>
+<!-- <section>
   <div class="header-banner">
     <nav>
       <div class="container">
         <div class="nav-section">
           <div class="navlinks-section">
-            <!-- <label for="drop" class="toggle">Menu</label>
-                    <input type="checkbox" id="drop" /> -->
-            <!-- <div class="menu-icon" (click)="showMenu()">
-                        <i class="#"><mat-icon>notes</mat-icon></i>
-                        <img src="../../../assets/images/Icons/Menu Icon.png" width="27px"/>
-  
-                    </div> -->
             <ul class="menu">
               <li (click)="onGrey()" class="logo-imgg">
                 <a class="site_logo" [routerLink]="['/user/Home']" (click)="showMenu()">
@@ -46,6 +38,59 @@
       </div>
     </nav>
   </div>
+</section> -->
+
+<section>
+  <div class="header-banner">
+    <nav>
+      <div class="container">
+        <div class="nav-section">
+          <div class="navlinks-section">
+            <ul class="menu">
+              <!-- <li (click)="onGrey()" class="logo-imgg">
+                <a class="site_logo" [routerLink]="['/user/Home']" (click)="showMenu()">
+                  <img src="assets/images/menulogo.png" />
+                </a>
+              </li> -->
+
+              <div class="ecosystem">
+                <p>VE - ECOSYSTEM</p>
+              </div>
+
+              <li>
+                <div class="ecosystem_image">
+                  <img src="../../../assets/images/VEmenu.png">
+                </div>
+              </li>
+
+              <div class="eco_buttons">
+                <button class="VEnroute" [routerLink]="['/user/VEnroute']" (click)="onGrey()">
+                  <a (click)="showMenu()"></a>
+                </button>
+
+                <button class="VEnergy" [routerLink]="['/user/VEnergy']" (click)="onGreen()">
+                  <a (click)="showMenu()"></a>
+                </button>
+
+                <button class="VEase" [routerLink]="['/user/VEase']" (click)="onGrey()">
+                  <a (click)="showMenu()"></a>
+                </button>
+
+                <!-- <button class="VEquipment">
+                  <a (click)="showMenu()"></a>
+                </button>
+
+                <button class="VEssentials">
+                  <a (click)="showMenu()"></a>
+                </button> -->
+              </div>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
 </section>
 
 <!-- Blue -->
@@ -55,12 +100,12 @@
       <img src="../../../assets/images/Icons/Menu Icon1.png" width="27px" />
     </button>
     <button (click)="gotoHome()">
-      <img src="../../../assets/images/Icons/Home Icon1.png" width="23px"/>
-
+      <a (click)="closeMenu()">
+        <img src="../../../assets/images/Icons/Home Icon1.png" width="23px" />
+      </a>      
     </button>
     <button class="person-btn">
-      <img src="../../../assets/images/Icons/Profile icon1.png" width="30px"/>
-
+      <img src="../../../assets/images/Icons/Profile icon1.png" width="30px" />
     </button>
   </div>
 </div>
@@ -71,13 +116,12 @@
       <img src="../../../assets/images/Icons/Menu Icon2.png" width="27px" />
     </button>
     <button (click)="gotoHome()">
-      <img src="../../../assets/images/Icons/Home Icon2.png" width="23px"/>
-
+      <a (click)="closeMenu()">
+        <img src="../../../assets/images/Icons/Home Icon2.png" width="23px" />
+      </a>
     </button>
     <button class="person-btn">
-      <img src="../../../assets/images/Icons/Profile icon2.png" width="30px"/>
-
+      <img src="../../../assets/images/Icons/Profile icon2.png" width="30px" />
     </button>
   </div>
 </div>
-

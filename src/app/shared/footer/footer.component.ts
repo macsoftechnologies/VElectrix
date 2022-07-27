@@ -43,6 +43,12 @@ export class FooterComponent implements OnInit {
     document.querySelector('.open-icon')?.classList.toggle('close-icon')
   }
 
+  closeMenu() {
+    // document.querySelector('.menu')?.classList.toggle('open-menu')
+    const removeClass = document.querySelector('.menu')
+    removeClass?.classList.remove('open-menu')
+  }
+
   onGreen() {
     this.GreenColor = !this.Service.colorChangeGreen();    //True
   }

@@ -135,7 +135,7 @@
     </div>
   </div>
 
-  <div class="vehicle_name" data-toggle="modal" data-target="#exampleModal">
+  <!-- <div class="vehicle_name" data-toggle="modal" data-target="#exampleModal">
     <div class="get_model_rating">
       <div class="ratetag">
         <div class="amount">
@@ -143,7 +143,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="container">
     <!-- <div class="specs-carousel-sec">
@@ -215,52 +215,126 @@
       <div class="specs">
         <h4>Vehicle Specifications:</h4>
         <form *ngFor="let vecSpecs of getVehicleSpecs">
+
           <div class="form-group row">
             <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Vehicle Model</label>
+            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Top Speed</label>
             <!-- <label class="col-xs-1 col-form-label">:</label> -->
             <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.model}}</p>
+              <p>{{vecSpecs?.speed}}</p>
             </div>
           </div>
 
           <div class="form-group row">
             <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Battery</label>
+            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Range</label>
             <!-- <label class="col-xs-1 col-form-label">:</label> -->
             <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.battery}}</p>
+              <p>{{vecSpecs?.range}}</p>
             </div>
           </div>
 
           <div class="form-group row">
             <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Battery Casing</label>
+            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Charging Time</label>
             <!-- <label class="col-xs-1 col-form-label">:</label> -->
             <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.batteryCasing}}</p>
+              <p>{{vecSpecs?.chargingTime}}</p>
             </div>
           </div>
 
           <div class="form-group row">
             <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Blinkers</label>
+            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Load Capacity</label>
             <!-- <label class="col-xs-1 col-form-label">:</label> -->
             <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.blinkers}}</p>
+              <p>{{vecSpecs?.loadCapacity}}</p>
             </div>
           </div>
 
           <div class="form-group row">
             <span class="col-xs-1 col-1"></span>
-            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">BMS</label>
+            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Battery Type</label>
             <!-- <label class="col-xs-1 col-form-label">:</label> -->
             <div class="col-xs-6 col-6">
-              <p>{{vecSpecs?.bms}}</p>
+              <p>{{vecSpecs?.batteryType}}</p>
             </div>
           </div>
- 
+
+          <div class="form-group row">
+            <span class="col-xs-1 col-1"></span>
+            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Motor type</label>
+            <!-- <label class="col-xs-1 col-form-label">:</label> -->
+            <div class="col-xs-6 col-6">
+              <p>{{vecSpecs?.motorType}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <span class="col-xs-1 col-1"></span>
+            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Battery Capacity</label>
+            <!-- <label class="col-xs-1 col-form-label">:</label> -->
+            <div class="col-xs-6 col-6">
+              <p>{{vecSpecs?.batteryCapacity}}</p>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <span class="col-xs-1 col-1"></span>
+            <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Motor Capacity</label>
+            <!-- <label class="col-xs-1 col-form-label">:</label> -->
+            <div class="col-xs-6 col-6">
+              <p>{{vecSpecs?.motorCapacity}}</p>
+            </div>
+          </div>
+         
            <div [hidden] = "isShow" class="animated zoomIn">
+
+            <div class="form-group row">
+              <span class="col-xs-1 col-1"></span>
+              <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Vehicle Model</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.model}}</p>
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <span class="col-xs-1 col-1"></span>
+              <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Battery</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.battery}}</p>
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <span class="col-xs-1 col-1"></span>
+              <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Battery Casing</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.batteryCasing}}</p>
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <span class="col-xs-1 col-1"></span>
+              <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Blinkers</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.blinkers}}</p>
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <span class="col-xs-1 col-1"></span>
+              <label for="staticEmail" class="col-xs-5 col-5 col-form-label">BMS</label>
+              <!-- <label class="col-xs-1 col-form-label">:</label> -->
+              <div class="col-xs-6 col-6">
+                <p>{{vecSpecs?.bms}}</p>
+              </div>
+            </div>
+
           <div class="form-group row">
             <span class="col-xs-1 col-1"></span>
             <label for="staticEmail" class="col-xs-5 col-5 col-form-label">Brake</label>

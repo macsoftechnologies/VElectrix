@@ -163,13 +163,14 @@
           margin-left: 10px;
         }
         .form-group {
-          margin: 0px;
+          margin: 0px 20px;
           label {
             padding: 10px 0px 0px 0px;
             font-size: 16px;
           }
           p {
             padding: 10px 0px 0px 0px;
+            margin-bottom: 0px!important;
           }
         }
       }
